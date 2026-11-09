@@ -8,11 +8,9 @@ Universidad de Sonora · Departamento de Administración · Registro folio AA314
 
 | Página | Archivo | Contenido |
 |---|---|---|
-| Plataforma del diplomado | `index.html` | Bienvenida, ruta de inicio, programa de los 7 módulos, calendario, evaluación, constancia, ayuda, equipo y fuentes |
-| Módulo 5 · Guía de estudio (piloto) | `modulo-5-guia.html` | Entrada al módulo 5: objetivos, ideas clave, lecciones, videos, conceptos, fórmulas, procedimientos, lectura guiada de SPSS, autoevaluación y evidencia |
-| Módulo 5 · Presentación (piloto) | `modulo-5.html` | Presentación del instructor (Pedro David Sánchez Pérez) en su formato original con identidad UNISON |
-| Módulo 6 · Guía de estudio | `modulo-6-guia.html` | Entrada al módulo: objetivos, regla de decisión, lecciones con avance, lectura guiada de la salida de SPSS, Pruébate, evidencia y cierre |
-| Módulo 6 · Presentación | `modulo-6.html` | Presentación de clase en su formato original (una lámina a la vez, pasos, animaciones, videos e interactivos) con identidad UNISON |
+| Plataforma del diplomado | `index.html` | Bienvenida, ruta de inicio, programa, calendario, módulos disponibles, evaluación, constancia, ayuda, equipo y fuentes |
+| Módulo N · Guía de estudio | `modulo-N-guia.html` (N = 2, 4, 5, 6) | Misma plantilla en todos: lecciones, videos de repaso, conceptos y fórmulas, lectura guiada de SPSS, autoevaluación, errores comunes, evidencia y cierre |
+| Módulo N · Presentación | `modulo-N.html` (N = 2, 4, 5, 6) | Presentación del instructor en su formato original, con el mismo marco de navegación en todos los módulos |
 
 Los videos e interactivos del módulo 6 se sirven desde el sitio de la clase: <https://edsalasg.github.io/inferencia-medias-dos-poblaciones/>.
 
@@ -21,7 +19,7 @@ Los videos e interactivos del módulo 6 se sirven desde el sitio de la clase: <h
 | Dato | Valor |
 |---|---|
 | Autor | Mtro. Eduardo Salas García · esalas@eduardosalas.com |
-| Versión publicada | Plataforma V7, Módulo 5 · Guía V1 y Presentación V1 (piloto), Módulo 6 · Guía V1 y Presentación V2, del 09/11/2026 (Hermosillo, Sonora) |
+| Versión publicada | Plataforma V8; módulo 2 (guía V1, presentación V1), módulo 4 (guía V1, presentación V1), módulo 5 (guía V2, presentación V2) y módulo 6 (guía V2, presentación V3), del 09/11/2026 (Hermosillo, Sonora) |
 | Versión anterior | Plataforma V5 y Módulo 6 V1 (página continua), publicadas el 09/11/2026 a las 14:54 h |
 | Archivos de origen | `2026_11_09_V6_Plataforma_Diplomado_Herramientas_Estadisticas.html`, `2026_11_09_V2_Modulo6_Medias_Dos_Poblaciones.html` y `2026_11_09_V1_Modulo6_Guia_Medias_Dos_Poblaciones.html` |
 | Cambios para publicar | Enlaces entre páginas ajustados a `index.html`, `modulo-6-guia.html` y `modulo-6.html`; enlaces a los .zip del módulo 6 apuntan al sitio de la clase; se agregó la indicación de no indexar en buscadores |
