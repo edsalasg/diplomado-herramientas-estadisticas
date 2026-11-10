@@ -730,6 +730,13 @@ ol.lecs > li.lec{max-width:1060px}
 .ux2-visor .marco:fullscreen .salir,.ux2-visor .marco.completa .salir{display:block}
 .ux2-visor .marco.completa{position:fixed;inset:0;z-index:2147483000;width:100vw;height:100vh;max-height:none;min-height:0;aspect-ratio:auto;border:0;border-radius:0}
 html.ux2-sin-scroll,html.ux2-sin-scroll body{overflow:hidden}
+.ux2-mapa{margin:6px 0 18px;border:1px solid var(--linea,#D5D8DC);border-radius:12px;background:var(--superficie,#F4F3F0)}
+.ux2-mapa > summary{cursor:pointer;padding:12px 16px;font-weight:700;color:var(--titulo,#24398A);min-height:44px}
+.ux2-mapa .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 22px;padding:4px 16px 14px}
+.ux2-mapa .gt{margin:8px 0 4px;font-weight:700}
+.ux2-mapa .gt a{text-decoration:none}
+.ux2-mapa ul{margin:0;padding-left:18px}
+.ux2-mapa li{margin:3px 0;text-align:left;font-size:.95rem}
 .ux2-guiados{display:grid;gap:12px;margin:14px 0}
 .ux2-guiados > details{border:1px solid var(--linea,#D5D8DC);border-radius:12px;padding:0 16px;background:var(--superficie,#F4F3F0)}
 .ux2-guiados > details > summary{cursor:pointer;padding:14px 0;font-weight:700;list-style-position:outside}
@@ -831,7 +838,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <button data-paso="practica" role="tab" type="button"><span class="n">2</span>Practica</button>
 <button data-paso="comprueba" role="tab" type="button"><span class="n">3</span>Comprueba</button>
 <button data-paso="entrega" role="tab" type="button"><span class="n">4</span>Entrega</button>
-<button class="consultar" data-paso="consultar" role="tab" type="button">Consultar</button></div>
+<button class="consultar" data-paso="consultar" role="tab" type="button">Consultar</button></div><details class="ux2-mapa no-imprimir" id="mapa"><summary>Mapa del módulo: ir directo a…</summary><nav aria-label="Mapa del módulo" class="cols"><div class="g"><p class="gt"><a href="#aprende">1 Aprende</a></p><ul><li><a href="#leccion-1">Lección 1. Apertura y muestreo aleatorio simple</a></li><li><a href="#leccion-2">Lección 2. Introducción a las distribuciones muestrales</a></li><li><a href="#leccion-3">Lección 3. Distribución muestral de x̄ y de p̄</a></li><li><a href="#leccion-4">Lección 4. Propiedades de los estimadores</a></li><li><a href="#leccion-5">Lección 5. Otros métodos de muestreo</a></li><li><a href="#leccion-6">Lección 6. Ejercicios en SPSS</a></li><li><a href="#leccion-7">Lección 7. Aplicación en investigación: Valenzo-Jiménez y González-Samaniego (2021)</a></li><li><a href="#leccion-8">Lección 8. Referencias, materiales e índice</a></li><li><a href="#videos">Videos de repaso</a></li></ul></div><div class="g"><p class="gt"><a href="#practica">2 Practica</a></p><ul><li><a href="#lectura">Lectura guiada de una salida de SPSS</a></li><li><a href="#cuidado">Errores frecuentes</a></li><li><a href="#bases">Bases para practicar</a></li></ul></div><div class="g"><p class="gt"><a href="#comprueba">3 Comprueba</a></p><ul><li><a href="#autoevaluacion">Comprueba lo que aprendiste</a></li></ul></div><div class="g"><p class="gt"><a href="#entrega">4 Entrega</a></p><ul><li><a href="#evidencia">Tu evidencia</a></li></ul></div><div class="g"><p class="gt"><a href="#consultar">Consultar</a></p><ul><li><a href="#consulta">Para consultar</a></li><li><a href="#consultar-s4">Fuentes</a></li></ul></div></nav></details>
 <main>
 
 
@@ -999,7 +1006,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <details class="proc" id="proc-10"><summary>Redactar y exportar el reporte a PDF</summary><ol><li>En el Visor: Insertar &gt; Nuevo texto debajo de cada tabla para interpretar.</li><li>Borrar salidas fallidas o repetidas desde el panel izquierdo.</li><li>Archivo &gt; Exportar &gt; Tipo PDF &gt; Aceptar.</li></ol><p><strong>Qué leer en la salida:</strong> El resultado es un solo PDF con tablas y texto, que es el formato de entrega. Antes de exportar conviene limpiar el visor: en estas salidas hay tablas de frecuencias de cientos de filas y tres copias idénticas de Explorar. Un visor limpio facilita leer la interpretación.</p></details></div>
 </section><section aria-labelledby="leer" class="leer-mas"><h3 id="leer">Dónde leer más en la bibliografía</h3><ul><li>Anderson: Cap. 7 Muestreo y distribuciones de muestreo (7.1-7.8), pp. 265-301. <span class="nota">Núcleo teórico de la sesión: muestreo aleatorio simple, estimación puntual, distribuciones de x̄ y p̄, TLC, propiedades de los estimadores y otros métodos de muestreo.</span></li><li>Anderson: Apéndice 7.2 Muestreo aleatorio con Minitab, pp. 306. <span class="nota">Procedimiento en Minitab, el software del programa para esta sesión.</span></li><li>Anderson: 8.3 Determinación del tamaño de la muestra (media) y 8.4 Determinación del tamaño de la muestra (proporción), pp. 325; 330. <span class="nota">Fórmulas de tamaño de muestra; explica el 385 de la calculadora.</span></li><li>Padró-Solanet: 2. ¿Cómo funciona el muestreo probabilístico?; 3. Muestreo probabilístico (marco, simple, sistemático, estratificado, no proporcional, conglomerados, multinivel); 4. No probabilísticos (intencional, cuotas, conveniencia, bola de nieve), pp. 20-48. <span class="nota">El 'libro de puro muestreo' que el expositor dijo estar resumiendo [00:44:47]: afijación, marco de muestreo y no probabilísticos que Anderson no detalla.</span></li><li>otro (Pérez López, Muestreo estadístico. Conceptos y problemas resueltos): Cap. 3 Muestreo aleatorio simple sin y con reposición: 'Tamaño de la muestra' y 'Comparación entre muestreo aleatorio sin y con reposición', pp. PDF 125-135 (impresas 111-121); núcleo: PDF 128-132 (impresas 114-118). <span class="nota">Fórmula n = n0/(1 + n0/N) y cuadro de tamaños con coeficiente de confianza: explica el 235 (N = 600) y el 385 (N = 950 000) de la clase; por qué P = 0.5 da el n máximo.</span></li><li>otro (Pérez López, Muestreo estadístico. Conceptos y problemas resueltos): Cap. 4 Muestreo estratificado (concepto y afijación); cap. 5 Muestreo sistemático (especificaciones); cap. 7 Muestreo unietápico de conglomerados, pp. PDF 163-169 (impresas 149-155); PDF 213-214 (impresas 199-200); PDF 289 (impresa 275). <span class="nota">Formalizar estratos, tipos de afijación (uniforme, proporcional, Neyman, óptima), riesgos del sistemático (periodicidad) y la lógica complementaria de los conglomerados.</span></li><li>otro (Pérez López, Muestreo estadístico. Conceptos y problemas resueltos): Cap. 10 Muestreo estadístico mediante SPSS: asistente de muestreo (crear, modificar y ejecutar un plan) y preparación del análisis, pp. PDF 367-383 (impresas 353-369); asistente de muestreo: PDF 368-375 (impresas 354-361). <span class="nota">Menús de Analizar &gt; Muestras complejas &gt; Seleccionar una muestra..., que en clase quedaron sin concluir [01:56:30]-[02:06:05].</span></li><li>otro (Valenzo-Jiménez y González-Samaniego, 2021, Mercados y Negocios, 43, 49-76): Metodología y resultados (población, muestra, estratos, Alfa de Cronbach, Kolmogorov-Smirnov, Spearman), pp. 60-64. <span class="nota">Ver un caso real de población finita (N = 3 711), tamaño de muestra (349 → 350) y estratificación geográfica, y practicar la lectura crítica de cómo se eligió cada unidad.</span></li><li>otro (Guía de SPSS del expositor, 8 páginas): 1 Tamaño de muestra; 2 Escuelas (MAS); 3 Hogares estratificado; 4 Hogares conglomerados; 5 tabla comparativa; 6 entrega; 7 problemas frecuentes, pp. 1-8. <span class="nota">Menús de SPSS 25 en español para muestrear, valores de referencia de las bases y solución de errores comunes (filtro activo, semilla, medida de Colonia).</span></li></ul></section><section aria-labelledby="nts" class="notas"><h3 id="nts">Mis notas del módulo 4</h3>
 <textarea aria-label="Mis notas" id="mis-notas" placeholder="Lo que entendí, mis dudas y cómo lo aplicaría en mi investigación"></textarea>
-<button id="exportar-notas" type="button">Descargar mis notas (.txt)</button></section><section aria-labelledby="fuentes"><h2 id="fuentes">Fuentes</h2><ol>
+<button id="exportar-notas" type="button">Descargar mis notas (.txt)</button></section><section aria-labelledby="fuentes" id="consultar-s4"><h2 id="fuentes">Fuentes</h2><ol>
 <li>Luis Antonio Alonso Reyna (2026). Presentación de la sesión del 10-09-2026 [presentación web]. https://luisalonso22.github.io/Muestreo_Distribuciones/</li>
 <li>Salas García, E. (2026). <em>Guía de estudio · Procesamiento y análisis de datos</em> (V8, 02-10-2026), sesión 5. https://edsalasg.github.io/guia-estudio-procesamiento-datos/</li>
 <li>Universidad de Sonora. (2026). <em>Registro de actividad académica</em> (folio AA314016228).</li>
@@ -1007,7 +1014,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <li>Cohn, J., y Greer, M. (2023). <em>Design for learning</em>. Rosenfeld Media. PDF p. 95.</li>
 <li>Kadakia, C., y Owens, L. M. D. (2020). <em>Designing for modern learning</em>. ATD Press. PDF pp. 54 y 126.</li>
 </ol></section></div><details class="ux2-traz"><summary>Datos de esta página (versión, fuentes y trazabilidad)</summary><p class="aviso-in no-imprimir"><strong>Prototipo V6.</strong> Guía armada con el material de la sesión del 10-09-2026 (edición previa), ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p><section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
-<div class="tabla-scroll"><table><tbody><tr><th scope="row">Diseño UX2</th><td>Segunda versión de la experiencia de uso (UX2 V2, 10/11/2026 15:50 h, Hermosillo), derivada de 2026_11_10_V6_Modulo4_Guia_Muestreo_Distribuciones.html sin cambiar su contenido. Cambios de presentación, según el barrido de biblioteca UX del 10/11/2026 (2026_11_10_V1_Barrido_Biblioteca_UX_Plataforma_Diplomado.xlsx): el módulo se recorre en cuatro pasos (Aprende, Practica, Comprueba, Entrega) más «Consultar»; las lecciones se ven una a la vez; la barra queda en tres controles (letra, tema y «Más»); sin menú lateral; letra de 18 px, columna de texto de unos 70 caracteres y justificado con la última línea a la izquierda; la trazabilidad queda plegada al pie; la autoevaluación se abre en la misma pestaña. Cambios de la V2 respecto de la UX2 V1 (10/11/2026): botón «Ver en pantalla completa» visible arriba de las láminas de cada lección, con modo de respaldo dentro de la página y botón «Salir de pantalla completa (Esc)»; las láminas se ven más altas. Las etiquetas Verificable, Inferencia, Interpretación y Propuesta, los avisos de prototipo y las notas de procedencia siguen en la página y se ven con «Más ▾ → Modo revisión».</td></tr>
+<div class="tabla-scroll"><table><tbody><tr><th scope="row">Diseño UX2</th><td>Segunda versión de la experiencia de uso (UX2 V3, 10/11/2026 16:25 h, Hermosillo), derivada de 2026_11_10_V6_Modulo4_Guia_Muestreo_Distribuciones.html sin cambiar su contenido. Cambios de presentación, según el barrido de biblioteca UX del 10/11/2026 (2026_11_10_V1_Barrido_Biblioteca_UX_Plataforma_Diplomado.xlsx): el módulo se recorre en cuatro pasos (Aprende, Practica, Comprueba, Entrega) más «Consultar»; las lecciones se ven una a la vez; la barra queda en tres controles (letra, tema y «Más»); sin menú lateral; letra de 18 px, columna de texto de unos 70 caracteres y justificado con la última línea a la izquierda; la trazabilidad queda plegada al pie; la autoevaluación se abre en la misma pestaña. Cambios de la V2 respecto de la UX2 V1 (10/11/2026): botón «Ver en pantalla completa» visible arriba de las láminas de cada lección, con modo de respaldo dentro de la página y botón «Salir de pantalla completa (Esc)»; las láminas se ven más altas. Cambios de la V3 respecto de la V2 (10/11/2026 15:50 h): «Mapa del módulo», plegado bajo los cuatro pasos, con enlaces directos a cada lección y a cada sección de Practica, Comprueba, Entrega y Consultar (como el mapa de contenido de la V13), a petición del instructor. Las etiquetas Verificable, Inferencia, Interpretación y Propuesta, los avisos de prototipo y las notas de procedencia siguen en la página y se ven con «Más ▾ → Modo revisión».</td></tr>
 <tr><th scope="row">Archivo</th><td>2026_11_10_V6_Modulo4_Guia_Muestreo_Distribuciones</td></tr>
 <tr><th scope="row">Versión</th><td>V6 (prototipo para revisión). La entrega por Microsoft Teams se marca como Verificable (la fija el registro del diplomado); la sección Evidencia agrega la descarga de la plantilla de evidencia en Word con la portada del diplomado; el aviso inicial y los pendientes se refieren a la edición previa del material; los objetivos ya no repiten «Al terminar podrás», que está en el título del recuadro; se actualizan los enlaces a la presentación y a la autoevaluación. Versión anterior: la autoevaluación indica exportar el resultado en PDF y subirlo a Teams. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
 <tr><th scope="row">Fecha y hora de emisión</th><td>10/11/2026 08:45 h (Hermosillo, Sonora, UTC−7)</td></tr>
@@ -1020,7 +1027,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <tr><th scope="row">Antecedentes</th><td>2026_11_09_V5_Modulo4_Guia_Muestreo_Distribuciones.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 5; plantilla común de guía de módulo (la misma de los módulos 2, 5 y 6); presentación del módulo (2026_11_10_V6_Modulo4_Muestreo_Distribuciones.html); autoevaluación del módulo (2026_11_10_V4_Modulo4_Autoevaluacion_Muestreo_Distribuciones.html); plataforma (2026_11_10_V13_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
 <tr><th scope="row">Uso previsto</th><td>Guía del módulo 4 para revisión del instructor y la coordinación.</td></tr>
 </tbody></table></div></details></section></details></main>
-<footer>2026_11_10_V2_UX2_Modulo4_Guia · UX2 V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_10_V3_UX2_Modulo4_Guia · UX2 V3 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 <script>
@@ -1163,37 +1170,6 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 })();
 
 (function(){
-  var K=document.body.getAttribute('data-ux2-modulo');
-  try{ localStorage.setItem('ux2-ultimo-modulo',K); }catch(e){}
-  var pasos=[].slice.call(document.querySelectorAll('.ux2-pasos button'));
-  var paneles=[].slice.call(document.querySelectorAll('.ux2-panel'));
-  function abrir(id,enfocar){
-    paneles.forEach(function(p){ p.hidden=(p.id!=='p-'+id); });
-    pasos.forEach(function(b){ b.setAttribute('aria-selected',b.dataset.paso===id?'true':'false'); });
-    try{ localStorage.setItem('ux2-paso-'+K,id); }catch(e){}
-    if(enfocar){ var h=document.getElementById('p-'+id); if(h) window.scrollTo({top:Math.max(0,document.querySelector('.ux2-pasos').offsetTop-70),behavior:'smooth'}); }
-  }
-  pasos.forEach(function(b){ b.addEventListener('click',function(){ abrir(b.dataset.paso,true); history.replaceState(null,'','#'+b.dataset.paso); }); });
-  document.querySelectorAll('[data-ir-paso]').forEach(function(a){ a.addEventListener('click',function(ev){ ev.preventDefault(); abrir(a.getAttribute('data-ir-paso'),true); history.replaceState(null,'','#'+a.getAttribute('data-ir-paso')); }); });
-  function desdeHash(){
-    var h=location.hash.slice(1); if(!h) return false;
-    if(document.getElementById('p-'+h)){ abrir(h,false); return true; }
-    var el=document.getElementById(h); if(!el) return false;
-    var p=el.closest('.ux2-panel'); if(!p) return false;
-    abrir(p.id.slice(2),false);
-    var d=el.closest('details'); if(el.tagName==='DETAILS') el.open=true; else if(d) d.open=true;
-    setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); },60);
-    return true;
-  }
-  if(!desdeHash()){ var u=null; try{u=localStorage.getItem('ux2-paso-'+K);}catch(e){} abrir(u&&document.getElementById('p-'+u)?u:'aprende',false); }
-  window.addEventListener('hashchange',desdeHash);
-  /* Lecciones una a la vez */
-  var lis=[].slice.call(document.querySelectorAll('ol.lecs > li.lec')); if(!lis.length) return;
-  var nav=document.getElementById('ux2-lec-nav'), puntos=document.getElementById('ux2-puntos'), cuenta=document.getElementById('ux2-cuenta');
-  var cajas=lis.map(function(li){ return li.querySelector('input.hecho'); });
-
-  /* Cada lección muestra su tramo de la presentación (o su contenido) dentro de la misma página */
-  function rango(li){ var m=/l[aá]minas?\s+(\d+)\s+a\s+(\d+)/i.exec(li.querySelector('.lec-n').textContent||''); return m?[+m[1],+m[2]]:null; }
   /* Visor de láminas reutilizable: tramo r=[a,b] de la presentación base, con pantalla completa */
   window.ux2Visor=function(base,r,titulo,href,nombre){
     nombre=nombre||'este tramo';
@@ -1225,6 +1201,40 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
       if(!ok){ pos.textContent=(r[1]>r[0]?nombre.charAt(0).toUpperCase()+nombre.slice(1)+' va de la lámina '+r[0]+' a la '+r[1]:'Lámina '+r[0])+'; avanza con los botones de la presentación.'; } else pinta(); });
     return v;
   };
+})();
+
+(function(){
+  var K=document.body.getAttribute('data-ux2-modulo');
+  try{ localStorage.setItem('ux2-ultimo-modulo',K); }catch(e){}
+  var pasos=[].slice.call(document.querySelectorAll('.ux2-pasos button'));
+  var paneles=[].slice.call(document.querySelectorAll('.ux2-panel'));
+  function abrir(id,enfocar){
+    paneles.forEach(function(p){ p.hidden=(p.id!=='p-'+id); });
+    pasos.forEach(function(b){ b.setAttribute('aria-selected',b.dataset.paso===id?'true':'false'); });
+    try{ localStorage.setItem('ux2-paso-'+K,id); }catch(e){}
+    if(enfocar){ var h=document.getElementById('p-'+id); if(h) window.scrollTo({top:Math.max(0,document.querySelector('.ux2-pasos').offsetTop-70),behavior:'smooth'}); }
+  }
+  pasos.forEach(function(b){ b.addEventListener('click',function(){ abrir(b.dataset.paso,true); history.replaceState(null,'','#'+b.dataset.paso); }); });
+  document.querySelectorAll('[data-ir-paso]').forEach(function(a){ a.addEventListener('click',function(ev){ ev.preventDefault(); abrir(a.getAttribute('data-ir-paso'),true); history.replaceState(null,'','#'+a.getAttribute('data-ir-paso')); }); });
+  function desdeHash(){
+    var h=location.hash.slice(1); if(!h) return false;
+    if(document.getElementById('p-'+h)){ abrir(h,false); return true; }
+    var el=document.getElementById(h); if(!el) return false;
+    var p=el.closest('.ux2-panel'); if(!p) return false;
+    abrir(p.id.slice(2),false);
+    var d=el.closest('details'); if(el.tagName==='DETAILS') el.open=true; else if(d) d.open=true;
+    setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); },60);
+    return true;
+  }
+  if(!desdeHash()){ var u=null; try{u=localStorage.getItem('ux2-paso-'+K);}catch(e){} abrir(u&&document.getElementById('p-'+u)?u:'aprende',false); }
+  window.addEventListener('hashchange',desdeHash);
+  /* Lecciones una a la vez */
+  var lis=[].slice.call(document.querySelectorAll('ol.lecs > li.lec')); if(!lis.length) return;
+  var nav=document.getElementById('ux2-lec-nav'), puntos=document.getElementById('ux2-puntos'), cuenta=document.getElementById('ux2-cuenta');
+  var cajas=lis.map(function(li){ return li.querySelector('input.hecho'); });
+
+  /* Cada lección muestra su tramo de la presentación (o su contenido) dentro de la misma página */
+  function rango(li){ var m=/l[aá]minas?\s+(\d+)\s+a\s+(\d+)/i.exec(li.querySelector('.lec-n').textContent||''); return m?[+m[1],+m[2]]:null; }
   function montar(li){
     if(li.dataset.montada) return; li.dataset.montada='1';
     var a=li.querySelector('.lec-acc a'); if(!a) return;
@@ -1253,7 +1263,14 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
   document.getElementById('ux2-sig').addEventListener('click',function(){ if(i===lis.length-1){ abrir('practica',true); history.replaceState(null,'','#practica'); } else ver(i+1); });
   cajas.forEach(function(c){ if(c) c.addEventListener('change',marcar); });
   document.addEventListener('restablecer',function(){ setTimeout(marcar,0); });
-  var primera=cajas.findIndex(function(c){ return !(c&&c.checked); }); ver(primera<0?0:primera);
+  var primera=cajas.findIndex(function(c){ return !(c&&c.checked); });
+  function porHash(){ var mm=/^#leccion-(\d+)$/.exec(location.hash); if(!mm) return false; abrir('aprende',false); ver(parseInt(mm[1],10)-1);
+    setTimeout(function(){ var x=lis[i]; if(x) x.scrollIntoView({behavior:'smooth',block:'start'}); },60); return true; }
+  if(!porHash()) ver(primera<0?0:primera);
+  window.addEventListener('hashchange',porHash);
+  var mapa=document.getElementById('mapa');
+  if(mapa) mapa.addEventListener('click',function(ev){ var a=ev.target.closest('a'); if(!a) return; var h=a.getAttribute('href');
+    if(h===location.hash){ ev.preventDefault(); window.dispatchEvent(new HashChangeEvent('hashchange')); } mapa.open=false; });
 })();
 </script></body>
 </html>

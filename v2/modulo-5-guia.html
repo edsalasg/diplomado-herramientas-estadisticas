@@ -730,6 +730,13 @@ ol.lecs > li.lec{max-width:1060px}
 .ux2-visor .marco:fullscreen .salir,.ux2-visor .marco.completa .salir{display:block}
 .ux2-visor .marco.completa{position:fixed;inset:0;z-index:2147483000;width:100vw;height:100vh;max-height:none;min-height:0;aspect-ratio:auto;border:0;border-radius:0}
 html.ux2-sin-scroll,html.ux2-sin-scroll body{overflow:hidden}
+.ux2-mapa{margin:6px 0 18px;border:1px solid var(--linea,#D5D8DC);border-radius:12px;background:var(--superficie,#F4F3F0)}
+.ux2-mapa > summary{cursor:pointer;padding:12px 16px;font-weight:700;color:var(--titulo,#24398A);min-height:44px}
+.ux2-mapa .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:6px 22px;padding:4px 16px 14px}
+.ux2-mapa .gt{margin:8px 0 4px;font-weight:700}
+.ux2-mapa .gt a{text-decoration:none}
+.ux2-mapa ul{margin:0;padding-left:18px}
+.ux2-mapa li{margin:3px 0;text-align:left;font-size:.95rem}
 .ux2-guiados{display:grid;gap:12px;margin:14px 0}
 .ux2-guiados > details{border:1px solid var(--linea,#D5D8DC);border-radius:12px;padding:0 16px;background:var(--superficie,#F4F3F0)}
 .ux2-guiados > details > summary{cursor:pointer;padding:14px 0;font-weight:700;list-style-position:outside}
@@ -831,7 +838,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <button data-paso="practica" role="tab" type="button"><span class="n">2</span>Practica</button>
 <button data-paso="comprueba" role="tab" type="button"><span class="n">3</span>Comprueba</button>
 <button data-paso="entrega" role="tab" type="button"><span class="n">4</span>Entrega</button>
-<button class="consultar" data-paso="consultar" role="tab" type="button">Consultar</button></div>
+<button class="consultar" data-paso="consultar" role="tab" type="button">Consultar</button></div><details class="ux2-mapa no-imprimir" id="mapa"><summary>Mapa del módulo: ir directo a…</summary><nav aria-label="Mapa del módulo" class="cols"><div class="g"><p class="gt"><a href="#aprende">1 Aprende</a></p><ul><li><a href="#leccion-1">Lección 1. Ruta y puente con el módulo 4: muestreo y distribución muestral</a></li><li><a href="#leccion-2">Lección 2. Intervalos de confianza: media con σ conocida y desconocida, y proporción</a></li><li><a href="#leccion-3">Lección 3. Tamaño de muestra</a></li><li><a href="#leccion-4">Lección 4. Prueba de hipótesis: media y proporción</a></li><li><a href="#leccion-5">Lección 5. Aplicación en investigación: tres artículos</a></li><li><a href="#leccion-6">Lección 6. Cierre, materiales y tarea</a></li><li><a href="#videos">Videos de repaso</a></li></ul></div><div class="g"><p class="gt"><a href="#practica">2 Practica</a></p><ul><li><a href="#lectura">Lectura guiada de una salida de SPSS</a></li><li><a href="#cuidado">Errores frecuentes</a></li><li><a href="#bases">Bases para practicar</a></li></ul></div><div class="g"><p class="gt"><a href="#comprueba">3 Comprueba</a></p><ul><li><a href="#autoevaluacion">Comprueba lo que aprendiste</a></li></ul></div><div class="g"><p class="gt"><a href="#entrega">4 Entrega</a></p><ul><li><a href="#evidencia">Tu evidencia</a></li></ul></div><div class="g"><p class="gt"><a href="#consultar">Consultar</a></p><ul><li><a href="#consulta">Para consultar</a></li><li><a href="#consultar-s4">Fuentes</a></li></ul></div></nav></details>
 <main>
 
 
@@ -981,7 +988,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <details class="proc" id="proc-11"><summary>Abrir un .xlsx de Anderson en SPSS</summary><ol><li>Archivo &gt; Abrir &gt; Datos; tipo de archivo Excel</li><li>Marcar 'Leer nombres de variables de la primera fila'</li><li>En Hoja de trabajo elegir Data (varios archivos traen hojas auxiliares)</li><li>Aceptar y revisar Vista de variables</li></ol><p><strong>Qué leer en la salida:</strong> Comprueba que el número de casos coincida con la n de la base (100, 70, 20, 900, 50, 36, 60, 25, 400). SPSS cambia los espacios por guion bajo ('Amount Spent' pasa a Amount_Spent) y las variables de texto, como Response o Golfer, deben convertirse a 1/0 antes de calcular proporciones.</p></details></div>
 </section><section aria-labelledby="leer" class="leer-mas"><h3 id="leer">Dónde leer más en la bibliografía</h3><ul><li>Anderson: Cap. 7, sec. 7.5 Distribución de muestreo de x̄ (desviación estándar de x̄), pp. 278-285. <span class="nota">Repasar el error estándar y el TLC que sustentan los caps. 8 y 9</span></li><li>Anderson: Cap. 8 Estimación por intervalo (8.1 σ conocida, 8.2 σ desconocida, 8.3 tamaño de muestra, 8.4 proporción), pp. 308-335. <span class="nota">Fórmulas de IC y tamaño de muestra; casos Lloyd's, New Balance, Scheer, golfistas</span></li><li>Anderson: Apéndice 8.1 Estimación por intervalo con Minitab, pp. 341. <span class="nota">Rutinas 1-Sample Z, 1-Sample t, 1 Proportion</span></li><li>Anderson: Cap. 9 Pruebas de hipótesis (9.1 a 9.5; relación IC-prueba), pp. 348-381. <span class="nota">H0/Ha, errores, valor p, valor crítico, pruebas z y t, proporción; casos Hilltop, MaxFlight, AirRating, Holiday Toys, Pine Creek</span></li><li>Anderson: Apéndice 9.1 Pruebas de hipótesis con Minitab, pp. 398. <span class="nota">Configurar la prueba de hipótesis en Minitab</span></li><li>Lectura complementaria: Koçiu y Kodra (2021), WSEAS Trans. Bus. Econ. 18, 163-170; Wood (2013), SAGE Open, 1-11; Cumming y Finch (2005), American Psychologist 60(2), 170-180. <span class="nota">Artículos de aplicación de la sesión: tamaño de muestra reportado con honestidad (Koçiu y Kodra), intervalos en lugar de valores p (Wood) y lectura de gráficas con barras de error (Cumming y Finch)</span></li></ul></section><section aria-labelledby="nts" class="notas"><h3 id="nts">Mis notas del módulo 5</h3>
 <textarea aria-label="Mis notas" id="mis-notas" placeholder="Lo que entendí, mis dudas y cómo lo aplicaría en mi investigación"></textarea>
-<button id="exportar-notas" type="button">Descargar mis notas (.txt)</button></section><section aria-labelledby="fuentes"><h2 id="fuentes">Fuentes</h2><ol>
+<button id="exportar-notas" type="button">Descargar mis notas (.txt)</button></section><section aria-labelledby="fuentes" id="consultar-s4"><h2 id="fuentes">Fuentes</h2><ol>
 <li>Pedro David Sánchez Pérez (2026). Presentación de la sesión del 17-09-2026 [presentación web]. https://digitalpedrosanchez.github.io/estadistica_inferencial/</li>
 <li>Salas García, E. (2026). <em>Guía de estudio · Procesamiento y análisis de datos</em> (V8, 02-10-2026), sesión 6. https://edsalasg.github.io/guia-estudio-procesamiento-datos/</li>
 <li>Universidad de Sonora. (2026). <em>Registro de actividad académica</em> (folio AA314016228).</li>
@@ -989,7 +996,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <li>Cohn, J., y Greer, M. (2023). <em>Design for learning</em>. Rosenfeld Media. PDF p. 95.</li>
 <li>Kadakia, C., y Owens, L. M. D. (2020). <em>Designing for modern learning</em>. ATD Press. PDF pp. 54 y 126.</li>
 </ol></section></div><details class="ux2-traz"><summary>Datos de esta página (versión, fuentes y trazabilidad)</summary><p class="aviso-in no-imprimir"><strong>Prototipo V7.</strong> Guía armada con el material de la sesión del 17-09-2026 (edición previa), ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p><section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
-<div class="tabla-scroll"><table><tbody><tr><th scope="row">Diseño UX2</th><td>Segunda versión de la experiencia de uso (UX2 V2, 10/11/2026 15:50 h, Hermosillo), derivada de 2026_11_10_V7_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html sin cambiar su contenido. Cambios de presentación, según el barrido de biblioteca UX del 10/11/2026 (2026_11_10_V1_Barrido_Biblioteca_UX_Plataforma_Diplomado.xlsx): el módulo se recorre en cuatro pasos (Aprende, Practica, Comprueba, Entrega) más «Consultar»; las lecciones se ven una a la vez; la barra queda en tres controles (letra, tema y «Más»); sin menú lateral; letra de 18 px, columna de texto de unos 70 caracteres y justificado con la última línea a la izquierda; la trazabilidad queda plegada al pie; la autoevaluación se abre en la misma pestaña. Cambios de la V2 respecto de la UX2 V1 (10/11/2026): botón «Ver en pantalla completa» visible arriba de las láminas de cada lección, con modo de respaldo dentro de la página y botón «Salir de pantalla completa (Esc)»; las láminas se ven más altas. Las etiquetas Verificable, Inferencia, Interpretación y Propuesta, los avisos de prototipo y las notas de procedencia siguen en la página y se ven con «Más ▾ → Modo revisión».</td></tr>
+<div class="tabla-scroll"><table><tbody><tr><th scope="row">Diseño UX2</th><td>Segunda versión de la experiencia de uso (UX2 V3, 10/11/2026 16:25 h, Hermosillo), derivada de 2026_11_10_V7_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html sin cambiar su contenido. Cambios de presentación, según el barrido de biblioteca UX del 10/11/2026 (2026_11_10_V1_Barrido_Biblioteca_UX_Plataforma_Diplomado.xlsx): el módulo se recorre en cuatro pasos (Aprende, Practica, Comprueba, Entrega) más «Consultar»; las lecciones se ven una a la vez; la barra queda en tres controles (letra, tema y «Más»); sin menú lateral; letra de 18 px, columna de texto de unos 70 caracteres y justificado con la última línea a la izquierda; la trazabilidad queda plegada al pie; la autoevaluación se abre en la misma pestaña. Cambios de la V2 respecto de la UX2 V1 (10/11/2026): botón «Ver en pantalla completa» visible arriba de las láminas de cada lección, con modo de respaldo dentro de la página y botón «Salir de pantalla completa (Esc)»; las láminas se ven más altas. Cambios de la V3 respecto de la V2 (10/11/2026 15:50 h): «Mapa del módulo», plegado bajo los cuatro pasos, con enlaces directos a cada lección y a cada sección de Practica, Comprueba, Entrega y Consultar (como el mapa de contenido de la V13), a petición del instructor. Las etiquetas Verificable, Inferencia, Interpretación y Propuesta, los avisos de prototipo y las notas de procedencia siguen en la página y se ven con «Más ▾ → Modo revisión».</td></tr>
 <tr><th scope="row">Archivo</th><td>2026_11_10_V7_Modulo5_Guia_Intervalos_Pruebas_Hipotesis</td></tr>
 <tr><th scope="row">Versión</th><td>V7 (prototipo para revisión). La entrega por Microsoft Teams se marca como Verificable (la fija el registro del diplomado); la sección Evidencia agrega la descarga de la plantilla de evidencia en Word con la portada del diplomado; el aviso inicial y los pendientes se refieren a la edición previa del material; los objetivos ya no repiten «Al terminar podrás», que está en el título del recuadro; se actualizan los enlaces a la presentación y a la autoevaluación. Versión anterior: la autoevaluación indica exportar el resultado en PDF y subirlo a Teams. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
 <tr><th scope="row">Fecha y hora de emisión</th><td>10/11/2026 08:45 h (Hermosillo, Sonora, UTC−7)</td></tr>
@@ -1002,7 +1009,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <tr><th scope="row">Antecedentes</th><td>2026_11_09_V6_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html (versión anterior); 2026_11_09_V1_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html (V1, estructura previa); guía de estudio V8, sesión 6; plantilla común de guía de módulo; presentación del módulo (2026_11_10_V7_Modulo5_Intervalos_Pruebas_Hipotesis.html); autoevaluación del módulo (2026_11_10_V4_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis.html); plataforma (2026_11_10_V13_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
 <tr><th scope="row">Uso previsto</th><td>Guía del módulo 5 para revisión del instructor y la coordinación.</td></tr>
 </tbody></table></div></details></section></details></main>
-<footer>2026_11_10_V2_UX2_Modulo5_Guia · UX2 V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_10_V3_UX2_Modulo5_Guia · UX2 V3 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 <script>
@@ -1145,37 +1152,6 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 })();
 
 (function(){
-  var K=document.body.getAttribute('data-ux2-modulo');
-  try{ localStorage.setItem('ux2-ultimo-modulo',K); }catch(e){}
-  var pasos=[].slice.call(document.querySelectorAll('.ux2-pasos button'));
-  var paneles=[].slice.call(document.querySelectorAll('.ux2-panel'));
-  function abrir(id,enfocar){
-    paneles.forEach(function(p){ p.hidden=(p.id!=='p-'+id); });
-    pasos.forEach(function(b){ b.setAttribute('aria-selected',b.dataset.paso===id?'true':'false'); });
-    try{ localStorage.setItem('ux2-paso-'+K,id); }catch(e){}
-    if(enfocar){ var h=document.getElementById('p-'+id); if(h) window.scrollTo({top:Math.max(0,document.querySelector('.ux2-pasos').offsetTop-70),behavior:'smooth'}); }
-  }
-  pasos.forEach(function(b){ b.addEventListener('click',function(){ abrir(b.dataset.paso,true); history.replaceState(null,'','#'+b.dataset.paso); }); });
-  document.querySelectorAll('[data-ir-paso]').forEach(function(a){ a.addEventListener('click',function(ev){ ev.preventDefault(); abrir(a.getAttribute('data-ir-paso'),true); history.replaceState(null,'','#'+a.getAttribute('data-ir-paso')); }); });
-  function desdeHash(){
-    var h=location.hash.slice(1); if(!h) return false;
-    if(document.getElementById('p-'+h)){ abrir(h,false); return true; }
-    var el=document.getElementById(h); if(!el) return false;
-    var p=el.closest('.ux2-panel'); if(!p) return false;
-    abrir(p.id.slice(2),false);
-    var d=el.closest('details'); if(el.tagName==='DETAILS') el.open=true; else if(d) d.open=true;
-    setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); },60);
-    return true;
-  }
-  if(!desdeHash()){ var u=null; try{u=localStorage.getItem('ux2-paso-'+K);}catch(e){} abrir(u&&document.getElementById('p-'+u)?u:'aprende',false); }
-  window.addEventListener('hashchange',desdeHash);
-  /* Lecciones una a la vez */
-  var lis=[].slice.call(document.querySelectorAll('ol.lecs > li.lec')); if(!lis.length) return;
-  var nav=document.getElementById('ux2-lec-nav'), puntos=document.getElementById('ux2-puntos'), cuenta=document.getElementById('ux2-cuenta');
-  var cajas=lis.map(function(li){ return li.querySelector('input.hecho'); });
-
-  /* Cada lección muestra su tramo de la presentación (o su contenido) dentro de la misma página */
-  function rango(li){ var m=/l[aá]minas?\s+(\d+)\s+a\s+(\d+)/i.exec(li.querySelector('.lec-n').textContent||''); return m?[+m[1],+m[2]]:null; }
   /* Visor de láminas reutilizable: tramo r=[a,b] de la presentación base, con pantalla completa */
   window.ux2Visor=function(base,r,titulo,href,nombre){
     nombre=nombre||'este tramo';
@@ -1207,6 +1183,40 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
       if(!ok){ pos.textContent=(r[1]>r[0]?nombre.charAt(0).toUpperCase()+nombre.slice(1)+' va de la lámina '+r[0]+' a la '+r[1]:'Lámina '+r[0])+'; avanza con los botones de la presentación.'; } else pinta(); });
     return v;
   };
+})();
+
+(function(){
+  var K=document.body.getAttribute('data-ux2-modulo');
+  try{ localStorage.setItem('ux2-ultimo-modulo',K); }catch(e){}
+  var pasos=[].slice.call(document.querySelectorAll('.ux2-pasos button'));
+  var paneles=[].slice.call(document.querySelectorAll('.ux2-panel'));
+  function abrir(id,enfocar){
+    paneles.forEach(function(p){ p.hidden=(p.id!=='p-'+id); });
+    pasos.forEach(function(b){ b.setAttribute('aria-selected',b.dataset.paso===id?'true':'false'); });
+    try{ localStorage.setItem('ux2-paso-'+K,id); }catch(e){}
+    if(enfocar){ var h=document.getElementById('p-'+id); if(h) window.scrollTo({top:Math.max(0,document.querySelector('.ux2-pasos').offsetTop-70),behavior:'smooth'}); }
+  }
+  pasos.forEach(function(b){ b.addEventListener('click',function(){ abrir(b.dataset.paso,true); history.replaceState(null,'','#'+b.dataset.paso); }); });
+  document.querySelectorAll('[data-ir-paso]').forEach(function(a){ a.addEventListener('click',function(ev){ ev.preventDefault(); abrir(a.getAttribute('data-ir-paso'),true); history.replaceState(null,'','#'+a.getAttribute('data-ir-paso')); }); });
+  function desdeHash(){
+    var h=location.hash.slice(1); if(!h) return false;
+    if(document.getElementById('p-'+h)){ abrir(h,false); return true; }
+    var el=document.getElementById(h); if(!el) return false;
+    var p=el.closest('.ux2-panel'); if(!p) return false;
+    abrir(p.id.slice(2),false);
+    var d=el.closest('details'); if(el.tagName==='DETAILS') el.open=true; else if(d) d.open=true;
+    setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); },60);
+    return true;
+  }
+  if(!desdeHash()){ var u=null; try{u=localStorage.getItem('ux2-paso-'+K);}catch(e){} abrir(u&&document.getElementById('p-'+u)?u:'aprende',false); }
+  window.addEventListener('hashchange',desdeHash);
+  /* Lecciones una a la vez */
+  var lis=[].slice.call(document.querySelectorAll('ol.lecs > li.lec')); if(!lis.length) return;
+  var nav=document.getElementById('ux2-lec-nav'), puntos=document.getElementById('ux2-puntos'), cuenta=document.getElementById('ux2-cuenta');
+  var cajas=lis.map(function(li){ return li.querySelector('input.hecho'); });
+
+  /* Cada lección muestra su tramo de la presentación (o su contenido) dentro de la misma página */
+  function rango(li){ var m=/l[aá]minas?\s+(\d+)\s+a\s+(\d+)/i.exec(li.querySelector('.lec-n').textContent||''); return m?[+m[1],+m[2]]:null; }
   function montar(li){
     if(li.dataset.montada) return; li.dataset.montada='1';
     var a=li.querySelector('.lec-acc a'); if(!a) return;
@@ -1235,7 +1245,14 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
   document.getElementById('ux2-sig').addEventListener('click',function(){ if(i===lis.length-1){ abrir('practica',true); history.replaceState(null,'','#practica'); } else ver(i+1); });
   cajas.forEach(function(c){ if(c) c.addEventListener('change',marcar); });
   document.addEventListener('restablecer',function(){ setTimeout(marcar,0); });
-  var primera=cajas.findIndex(function(c){ return !(c&&c.checked); }); ver(primera<0?0:primera);
+  var primera=cajas.findIndex(function(c){ return !(c&&c.checked); });
+  function porHash(){ var mm=/^#leccion-(\d+)$/.exec(location.hash); if(!mm) return false; abrir('aprende',false); ver(parseInt(mm[1],10)-1);
+    setTimeout(function(){ var x=lis[i]; if(x) x.scrollIntoView({behavior:'smooth',block:'start'}); },60); return true; }
+  if(!porHash()) ver(primera<0?0:primera);
+  window.addEventListener('hashchange',porHash);
+  var mapa=document.getElementById('mapa');
+  if(mapa) mapa.addEventListener('click',function(ev){ var a=ev.target.closest('a'); if(!a) return; var h=a.getAttribute('href');
+    if(h===location.hash){ ev.preventDefault(); window.dispatchEvent(new HashChangeEvent('hashchange')); } mapa.open=false; });
 })();
 </script></body>
 </html>

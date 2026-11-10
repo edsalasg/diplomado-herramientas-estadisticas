@@ -54,6 +54,10 @@ ul.mods{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:re
 .chip{display:inline-block;font-size:.8rem;padding:2px 10px;border-radius:12px;background:var(--fondo2);border:1px solid var(--linea)}
 .chip.curso{background:var(--past-ambar);border-color:var(--ambar);color:var(--marino)}.chip.listo{background:var(--past-verde);border-color:var(--verde);color:var(--marino)}.chip.borr{background:var(--past-purpura);border-color:var(--purpura);color:var(--marino)}
 .mod .btn{margin-top:auto;text-align:center}
+.repaso{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:6px 0 10px}
+.repaso a{display:block;padding:16px 18px;border-radius:14px;border:1px solid var(--linea);border-left:6px solid var(--oro);background:var(--fondo2);text-decoration:none;color:var(--texto);min-height:44px}
+.repaso a strong{display:block;color:var(--azul);font-size:1.1rem;margin-bottom:4px}
+.repaso a span{display:block;color:var(--texto2);font-size:.95rem;text-align:left}
 .atajos{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 10px}
 .atajos a{padding:10px 16px;border-radius:10px;border:1px solid var(--linea);text-decoration:none;color:var(--texto);background:var(--fondo2);min-height:44px}
 footer{max-width:1080px;margin:0 auto;padding:10px 20px 30px;color:var(--texto2);font-size:.85rem}
@@ -160,6 +164,11 @@ html[data-theme="dark"] .bienv button.pri{color:#14191E}
   <p class="estado"><span class="chip">Sin iniciar</span> <span class="chip borr solo-revision">Borrador</span></p>
   <a class="btn sec" href="modulo-7-guia.html">Entrar al módulo 7</a>
 </li></ul>
+  <h2 class="tit">Para repasar</h2>
+  <div class="repaso">
+    <a href="ejercicios.html"><strong>Ejercicios guiados</strong><span>Los ejercicios de SPSS de los siete módulos en un solo lugar, con sus láminas y sus bases.</span></a>
+    <a href="presentaciones.html"><strong>Presentaciones completas</strong><span>Las presentaciones de los módulos 2 a 7, para verlas de principio a fin.</span></a>
+  </div>
   <nav class="atajos" aria-label="Información del diplomado">
     <a href="informacion.html#empieza">Antes de empezar</a>
     <a href="informacion.html#calendario">Calendario</a>
@@ -171,8 +180,8 @@ html[data-theme="dark"] .bienv button.pri{color:#14191E}
 <footer>
   <p>Universidad de Sonora · Departamento de Administración · Registro AA314016228</p>
   <details class="traz"><summary>Datos de esta página (versión y trazabilidad)</summary><table>
-<tr><th scope="row">Versión</th><td>UX2 V1 (segunda versión de la experiencia de uso; primera versión de esta portada).</td></tr>
-<tr><th scope="row">Fecha y hora de emisión</th><td>10/11/2026 15:50 h (Hermosillo, Sonora, UTC−7)</td></tr>
+<tr><th scope="row">Versión</th><td>UX2 V2 de esta portada (antecedente: 2026_11_10_V1_UX2_Inicio_Mi_Diplomado.html, 15:30 h). Cambio de la V2: la sección «Para repasar», con accesos a los ejercicios guiados de todos los módulos y a las presentaciones completas, a petición del instructor.</td></tr>
+<tr><th scope="row">Fecha y hora de emisión</th><td>10/11/2026 16:25 h (Hermosillo, Sonora, UTC−7)</td></tr>
 <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
 <tr><th scope="row">Archivo</th><td>index.html</td></tr>
 <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
@@ -185,7 +194,7 @@ html[data-theme="dark"] .bienv button.pri{color:#14191E}
 <tr><th scope="row">Pendientes</th><td>Fechas de cada módulo (por confirmar con la coordinación); prueba con cinco docentes antes de sustituir la V13; visto bueno de la Coordinación de Identidad Institucional.</td></tr>
 <tr><th scope="row">Uso previsto</th><td>Prototipo para revisión del equipo, publicado junto a la V13 para comparar.</td></tr>
 </table></details>
-  <p>2026_11_10_V1_UX2_Inicio_Mi_Diplomado · UX2 V1 · esalas@eduardosalas.com</p>
+  <p>2026_11_10_V2_UX2_Inicio_Mi_Diplomado · UX2 V2 · esalas@eduardosalas.com</p>
 </footer>
 <div class="bienv" id="bienv" hidden role="dialog" aria-modal="true" aria-labelledby="bienv-t">
   <div class="caja">
