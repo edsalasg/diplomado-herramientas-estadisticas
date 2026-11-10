@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V4";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V5";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -691,12 +691,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 2 · Estadística descriptiva con métodos tabulares y gráficos</h1>
   <p class="subtitulo">Guía de estudio del módulo</p>
   <p class="subtitulo">Aplicada a la investigación económica · Instructor: Jorge Alberto Muñan Valencia</p>
-  <p class="meta">V4 · prototipo para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V5 · prototipo para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="como-leer"><h2 id="como-leer">Cómo usar este módulo</h2>
-  <p class="aviso-in no-imprimir"><strong>Prototipo V4.</strong> Guía armada con el material de la sesión del 28-08-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
+  <p class="aviso-in no-imprimir"><strong>Prototipo V5.</strong> Guía armada con el material de la sesión del 28-08-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
   <p>Tres pasos: <strong>1)</strong> revisa lo esencial y las claves del módulo; <strong>2)</strong> estudia la presentación lección por lección y marca «Ya lo entendí»; <strong>3)</strong> practica la lectura guiada, contesta la autoevaluación y entrega tu evidencia.</p>
   <section class="objetivos" aria-labelledby="obj-m"><h3 id="obj-m">Al terminar el módulo podrás</h3><ol><li>Al terminar podrás identificar la escala de medición (nominal, ordinal, intervalo, razón) de una variable y decidir qué resúmenes tabulares y gráficos son legítimos para ella.</li><li>Al terminar podrás construir e interpretar distribuciones de frecuencia absoluta, relativa, porcentual y acumulada para datos cualitativos y cuantitativos.</li><li>Al terminar podrás definir número de clases, ancho de clase y límites de clase con las reglas de Anderson (sección 2.2) y justificar tu elección.</li><li>Al terminar podrás elegir entre gráfica de barras, circular, diagrama de puntos, histograma, ojiva, tabulación cruzada y diagrama de dispersión usando la figura 2.9 de Anderson.</li><li>Al terminar podrás reconocer errores de graficación (eje truncado, circular con demasiadas rebanadas, histograma confundido con barras, porcentajes sin denominador, ancho de clase a conveniencia).</li><li>Al terminar podrás leer una tabulación cruzada por fila o por columna y detectar la paradoja de Simpson.</li><li>Al terminar podrás ejecutar en SPSS: Frecuencias con gráficos, Recodificar en distintas variables, Histograma, Tablas cruzadas con porcentajes y Dispersión con línea de ajuste.</li><li>Al terminar podrás redactar la interpretación de una figura descriptiva sin sobreinterpretarla (asociación no es causalidad).</li></ol>
     <div class="progreso" aria-label="Avance del módulo 2"><i id="barra-avance"></i></div></section>
@@ -820,6 +820,7 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <section id="autoevaluacion" aria-labelledby="h-auto"><h2 id="h-auto">Autoevaluación</h2>
   <p>19 preguntas de opción múltiple sobre lo esencial del módulo. Están en su propia página para que cada pregunta y sus opciones se lean completas, una a la vez, con la explicación al responder y tu resultado al final. Tu avance se guarda en este navegador.</p>
   <p class="lec-ini"><a class="boton-entrar" href="modulo-2-autoevaluacion.html" target="diplomado-evaluacion">Abrir la autoevaluación →</a></p>
+  <p>Al terminar, exporta tu resultado en PDF desde la misma página (botón «Exportar mi resultado en PDF», con tu nombre) y súbelo a Teams, en la tarea del módulo. <span class="tag prop">Propuesta</span></p>
   <p class="nota">Se abre en otra pestaña; esta guía sigue a la mano para repasar.</p>
   </section>
   <section id="cuidado" aria-labelledby="h-cuidado"><h2 id="h-cuidado">Errores que más cuestan</h2><ul><li>Porcentaje sin denominador: escribe «19 (38.0 %)», nunca solo «38 %». Un 75 % puede ser 3 de 4 casos.</li><li>El porcentaje acumulado de una variable nominal no significa nada aunque SPSS lo imprima; solo se lee si la variable tiene orden (ordinal o clases).</li><li>El mismo conjunto de datos puede parecer simétrico, bimodal o perder la moda según el ancho y el inicio de las clases; prueba varios anchos y declara el criterio.</li><li>Con sesgo a la derecha la media supera a la mediana porque los valores extremos la jalan; con sesgo fuerte reporta la mediana. DESCRIPTIVES no la calcula: usa FREQUENCIES.</li><li>No concluyas con una tabla agregada sin revisar variables ocultas: antes de comparar grupos, verifica que su composición interna sea comparable (paradoja de Simpson).</li><li>La recta de tendencia no es un efecto causal: «cada comercial genera $495» no se sostiene con 10 semanas sin diseño experimental. Solo describe la muestra.</li></ul></section>
@@ -846,20 +847,20 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V4_Modulo2_Guia_Tablas_Graficas</td></tr>
-      <tr><th scope="row">Versión</th><td>V4 (prototipo para revisión). V4: Se actualizan los enlaces a la presentación con la portada y la paleta de colores homologadas del diplomado; contenido sin cambios. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V5_Modulo2_Guia_Tablas_Graficas</td></tr>
+      <tr><th scope="row">Versión</th><td>V5 (prototipo para revisión). V5: La sección Autoevaluación indica exportar el resultado en PDF y subirlo a Teams; se actualizan los enlaces a la presentación sin menciones del curso doctoral y a la autoevaluación nueva. Versión anterior: portada y paleta de colores homologadas. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 3 (28-08-2026): 8 objetivos, 5 ideas clave, 20 conceptos, 9 fórmulas, 16 procedimientos, 6 errores clave, 19 preguntas, 2 videos y 9 bases; auditado en las versiones V2 a V8 de esa guía. Se muestran las versiones condensadas de la vista de estudio; las referencias internas (transcripciones y archivos de trabajo) constan en la guía de origen.</td></tr>
       <tr><th scope="row">Excluido a propósito</th><td>Pendientes y dudas personales, énfasis del profesor y observaciones sobre capturas propias: son notas de estudio de Eduardo y no aplican al participante.</td></tr>
       <tr><th scope="row">Pendientes</th><td>Visto bueno del instructor (Jorge Alberto Muñan Valencia) sobre la guía, la evidencia propuesta y el uso de su presentación; el temario del registro incluye el polígono de frecuencias, que no aparece en el material de la sesión; la portada de la presentación corresponde al curso doctoral; visto bueno de Identidad Institucional.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V3_Modulo2_Guia_Tablas_Graficas.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 3; plantilla común de guía de módulo (la misma de los módulos 4, 5 y 6); presentación del módulo (2026_11_09_V4_Modulo2_Tablas_Graficas.html); autoevaluación del módulo (2026_11_09_V2_Modulo2_Autoevaluacion_Tablas_Graficas.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V4_Modulo2_Guia_Tablas_Graficas.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 3; plantilla común de guía de módulo (la misma de los módulos 4, 5 y 6); presentación del módulo (2026_11_09_V5_Modulo2_Tablas_Graficas.html); autoevaluación del módulo (2026_11_09_V3_Modulo2_Autoevaluacion_Tablas_Graficas.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
       <tr><th scope="row">Uso previsto</th><td>Guía del módulo 2 para revisión del instructor y la coordinación.</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V4_Modulo2_Guia_Tablas_Graficas · V4 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V5_Modulo2_Guia_Tablas_Graficas · V5 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 

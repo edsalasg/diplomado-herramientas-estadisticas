@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V2";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V3";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -691,12 +691,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 7 · Chi cuadrada y tabulaciones cruzadas</h1>
   <p class="subtitulo">Guía de estudio del módulo</p>
   <p class="subtitulo">Aplicadas a la investigación del comportamiento del consumidor · Instructor: Maritza Moreno Grano</p>
-  <p class="meta">V2 · borrador para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V3 · borrador para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="como-leer"><h2 id="como-leer">Cómo usar este módulo</h2>
-  <p class="aviso-in no-imprimir"><strong>Borrador V2.</strong> Guía armada con el material de la sesión del 01-10-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
+  <p class="aviso-in no-imprimir"><strong>Borrador V3.</strong> Guía armada con el material de la sesión del 01-10-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
   <p>Tres pasos: <strong>1)</strong> revisa lo esencial y la regla de decisión; <strong>2)</strong> estudia la presentación lección por lección y marca «Ya lo entendí»; <strong>3)</strong> practica la lectura guiada, contesta la autoevaluación y entrega tu evidencia.</p>
   <section class="objetivos" aria-labelledby="obj-m"><h3 id="obj-m">Al terminar el módulo podrás</h3><ol><li>Al terminar podrás explicar qué compara el estadístico chi-cuadrado (frecuencias observadas contra esperadas) y por qué nunca es negativo.</li><li>Al terminar podrás distinguir la prueba de bondad de ajuste (una variable, gl = k − 1) de la prueba de independencia (dos variables, gl = (r − 1)(c − 1)).</li><li>Al terminar podrás calcular a mano las frecuencias esperadas de una tabla de contingencia, el estadístico χ² y los grados de libertad, y decidir con el valor crítico de la Tabla 3 de Anderson.</li><li>Al terminar podrás correr en SPSS Analizar &gt; Estadísticos descriptivos &gt; Tablas cruzadas con Chi-cuadrado y recuentos observados y esperados, y leer la fila 'Chi-cuadrado de Pearson' (Valor, df, Sig.).</li><li>Al terminar podrás revisar el supuesto de frecuencias esperadas (nota al pie de SPSS) antes de interpretar el resultado.</li><li>Al terminar podrás redactar una conclusión correcta: rechazar o no rechazar H0 de independencia, describir la dirección con porcentajes de fila y no afirmar causalidad.</li></ol>
     <div class="progreso" aria-label="Avance del módulo 7"><i id="barra-avance"></i></div></section>
@@ -807,6 +807,7 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <section id="autoevaluacion" aria-labelledby="h-auto"><h2 id="h-auto">Autoevaluación</h2>
   <p>14 preguntas de opción múltiple sobre lo esencial del módulo. Están en su propia página para que cada pregunta y sus opciones se lean completas, una a la vez, con la explicación al responder y tu resultado al final. Tu avance se guarda en este navegador.</p>
   <p class="lec-ini"><a class="boton-entrar" href="modulo-7-autoevaluacion.html" target="diplomado-evaluacion">Abrir la autoevaluación →</a></p>
+  <p>Al terminar, exporta tu resultado en PDF desde la misma página (botón «Exportar mi resultado en PDF», con tu nombre) y súbelo a Teams, en la tarea del módulo. <span class="tag prop">Propuesta</span></p>
   <p class="nota">Se abre en otra pestaña; esta guía sigue a la mano para repasar.</p>
   </section>
   <section id="cuidado" aria-labelledby="h-cuidado"><h2 id="h-cuidado">Errores que más cuestan</h2><ul><li>Con Sig. &gt; .05 no se concluye «son independientes». Se escribe «no hay evidencia suficiente de asociación»: no rechazar H0 no prueba independencia.</li><li>Antes de interpretar, lee la nota al pie: si muchas casillas tienen recuento esperado menor que 5, la prueba no es fiable y hay que agrupar categorías.</li><li>No compares χ² contra .05. El χ² se compara con su valor crítico (según gl), o se compara Sig. contra α.</li><li>La columna dice «bilateral», pero la prueba es de cola superior y ese Sig. ya es el valor p. No lo dividas entre 2. (inferencia)</li><li>Un χ² significativo no dice quién difiere ni hacia dónde: descríbelo con porcentajes de fila u observadas contra esperadas.</li><li>Asociación no es causalidad: rechazar H0 solo indica que las variables no se comportan como independientes en la muestra.</li></ul></section>
@@ -833,20 +834,20 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V2_Modulo7_Guia_Chi_Cuadrada</td></tr>
-      <tr><th scope="row">Versión</th><td>V2 (borrador para revisión). V2: Se actualizan los enlaces a la presentación con la portada y la paleta de colores homologadas del diplomado; contenido sin cambios. V1: Primera versión, con la plantilla común de guía de módulo y la autoevaluación en página propia. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V3_Modulo7_Guia_Chi_Cuadrada</td></tr>
+      <tr><th scope="row">Versión</th><td>V3 (borrador para revisión). V3: La sección Autoevaluación indica exportar el resultado en PDF y subirlo a Teams; se actualizan los enlaces a la presentación sin menciones del curso doctoral y a la autoevaluación nueva. Versión anterior: portada y paleta de colores homologadas. V1: Primera versión, con la plantilla común de guía de módulo y la autoevaluación en página propia. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 8 (01-10-2026): 6 objetivos, 5 ideas clave, 17 conceptos, 10 fórmulas, 6 procedimientos, 6 errores clave, 14 preguntas, 2 videos y 10 bases; auditado en las versiones V2 a V8 de esa guía. Se muestran las versiones condensadas de la vista de estudio; las referencias internas (transcripciones y archivos de trabajo) constan en la guía de origen.</td></tr>
       <tr><th scope="row">Excluido a propósito</th><td>Pendientes y dudas personales, énfasis del profesor y observaciones sobre capturas propias: son notas de estudio de Eduardo y no aplican al participante.</td></tr>
       <tr><th scope="row">Pendientes</th><td>Visto bueno de la instructora (Maritza Moreno Grano) sobre la guía, la evidencia propuesta, las 14 láminas agregadas (el ejercicio de bondad de ajuste en SPSS no se corrió en clase) y el uso de su presentación; la portada de la presentación corresponde al curso doctoral; el ejemplo del café proviene de Lifeder, no del libro; visto bueno de Identidad Institucional.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V1_Modulo7_Guia_Chi_Cuadrada.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 8; plantilla común de guía de módulo (la misma de los módulos 2, 4, 5 y 6); la lectura guiada reconstruye la salida de SPSS de la cervecería con los valores de esa guía; presentación del módulo (2026_11_09_V2_Modulo7_Chi_Cuadrada.html); autoevaluación del módulo (2026_11_09_V2_Modulo7_Autoevaluacion_Chi_Cuadrada.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V2_Modulo7_Guia_Chi_Cuadrada.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 8; plantilla común de guía de módulo (la misma de los módulos 2, 4, 5 y 6); la lectura guiada reconstruye la salida de SPSS de la cervecería con los valores de esa guía; presentación del módulo (2026_11_09_V3_Modulo7_Chi_Cuadrada.html); autoevaluación del módulo (2026_11_09_V3_Modulo7_Autoevaluacion_Chi_Cuadrada.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
       <tr><th scope="row">Uso previsto</th><td>Guía del módulo 7 para revisión del instructor y la coordinación.</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V2_Modulo7_Guia_Chi_Cuadrada · V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V3_Modulo7_Guia_Chi_Cuadrada · V3 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 

@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V2";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V3";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -657,8 +657,17 @@ table.spss th[scope=row],table.spss caption{text-align:left}
 .ev-marcador{font-size:clamp(1.3rem,1.1rem + 1vw,2rem);font-weight:700;color:var(--titulo);margin:.2em 0;text-align:left}
 .ev-lista{padding-left:1.4em}.ev-lista li{margin:.5em 0;text-align:left}
 .ev-lista .est{font-weight:700}.ev-lista .est.ok{color:var(--verde)}.ev-lista .est.mal{color:var(--rojo)}
-.ev-hoja{display:none}
-@media print{.ev-tarjeta,.ev-tablero,.ev-b,.ev-acciones,#resultado{display:none!important}.ev-hoja{display:block}.ev-hoja>li{break-inside:avoid;margin:.6em 0}}
+.ev-entrega{margin:1.2em 0 0;padding:1em 1.1em;border:1px solid var(--linea);border-left:6px solid var(--unison-oro);border-radius:var(--radio);background:var(--superficie);max-width:62rem}
+.ev-entrega h3{margin-top:0}
+.ev-entrega label{display:block;font-weight:700;margin:.4em 0 .3em}
+.ev-entrega input{width:min(100%,32rem);padding:.55em .7em;font:inherit;border:1px solid var(--linea);border-radius:8px;background:var(--fondo);color:var(--texto)}
+.ev-aviso{margin:.6em 0 0;font-weight:700;color:var(--rojo)}
+.ev-reporte{display:none}
+.ev-reporte table{width:100%;border-collapse:collapse;font-size:.92em}
+.ev-reporte th,.ev-reporte td{border:1px solid #BFC5CC;padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-reporte .ok{color:#1E8449;font-weight:700}.ev-reporte .mal{color:#C0392B;font-weight:700}
+.ev-reporte dl{display:grid;grid-template-columns:max-content 1fr;gap:.25em 1em;margin:0 0 1em}.ev-reporte dt{font-weight:700}.ev-reporte dd{margin:0}
+@media print{main>section:not(#resultado){display:none!important}#resultado>*:not(.ev-reporte){display:none!important}#resultado .sig-seccion{display:none!important}.ev-reporte{display:block!important}#resultado,.ev-reporte,.ev-reporte table,.ev-reporte tbody{break-inside:auto!important;page-break-inside:auto!important}.ev-reporte tr{break-inside:avoid}}
 </style>
 <meta name="robots" content="noindex, nofollow">
 </head>
@@ -715,12 +724,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 5 · Autoevaluación</h1>
   <p class="subtitulo">Estimación por intervalo y pruebas de hipótesis</p>
   <p class="subtitulo">Aplicadas a la investigación de las ciencias administrativas · Instructor: Pedro David Sánchez Pérez</p>
-  <p class="meta">V2 · prototipo para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V3 · prototipo para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="h-como"><h2 id="h-como">Cómo funciona</h2>
-  <p>19 preguntas, una a la vez. Elige una opción: se marca en verde la correcta y aparece la explicación. Puedes ir y volver con los botones, con los números del tablero o con las flechas ← y → del teclado; las teclas 1 a 4 eligen la opción. Tus respuestas se guardan en este navegador; «Volver a empezar» las borra.</p>
+  <p>19 preguntas, una a la vez. Elige una opción: se marca en verde la correcta y aparece la explicación. Puedes ir y volver con los botones, con los números del tablero o con las flechas ← y → del teclado; las teclas 1 a 4 eligen la opción. Tus respuestas se guardan en este navegador; «Volver a empezar» las borra. <strong>Al terminar, exporta tu resultado en PDF y súbelo a Teams</strong> (sección Resultado).</p>
   <p class="nota">Antes de empezar, repasa la <a href="modulo-5-guia.html" target="diplomado">guía del módulo</a> y la <a href="modulo-5.html" target="diplomado-presentacion">presentación</a>. Preguntas de la guía de estudio V8, sesión 6, con su explicación verificada contra el material de la sesión <span class="tag v">Verificable</span></p>
   </section>
   <section id="preguntas" aria-labelledby="h-preg"><h2 id="h-preg">Preguntas</h2>
@@ -732,14 +741,22 @@ table.spss th[scope=row],table.spss caption{text-align:left}
     <div class="ev-x" id="ev-x" hidden></div>
     <div class="ev-b"><button type="button" id="ev-ant">← Anterior</button><button type="button" id="ev-sig" class="prim">Siguiente →</button><button type="button" id="ev-fin">Ver mi resultado</button></div>
   </article>
-  <noscript><p>La autoevaluación necesita JavaScript. Al imprimir esta página se obtiene la hoja completa con las respuestas.</p></noscript>
-  <ol class="ev-hoja"><li><p><strong>En una población de 5 estaturas (155, 160, 165, 170, 175; σ = 7.0711) se extraen muestras de tamaño n = 2 CON reemplazo (25 muestras ordenadas posibles). ¿Cuál es el error estándar de la media?</strong></p><ol type="A"><li>7.07</li><li>5.00 ✔</li><li>3.54</li><li>2.50</li></ol><p class="nota">Con muestreo con reemplazo las extracciones son independientes y σ_x̄ = σ/√n = 7.0711/1.4142 = 5.00, que coincide con la desviación estándar de las 25 medias muestrales. (Sin reemplazo, n/N = 0.4 &gt; 0.05 y Anderson exigiría el factor de corrección: 5.00 × √(3/4) = 4.33.)</p></li><li><p><strong>¿Cuál es el valor crítico z para un intervalo de confianza del 95 % bilateral?</strong></p><ol type="A"><li>1.645</li><li>1.96 ✔</li><li>2.576</li><li>0.95</li></ol><p class="nota">α = 0.05 se reparte en dos colas de 0.025; el z que deja 0.025 arriba es 1.96. 1.645 corresponde a una cola al 5 % (o dos colas al 10 %).</p></li><li><p><strong>Lloyd's: n = 100, x̄ = 82, σ = 20. ¿Cuál es el IC al 95 % para μ?</strong></p><ol type="A"><li>78.08 a 85.92 ✔</li><li>80.00 a 84.00</li><li>76.85 a 87.15</li><li>81.61 a 82.39</li></ol><p class="nota">EE = 20/√100 = 2; margen = 1.96 × 2 = 3.92; 82 ± 3.92 = 78.08 a 85.92.</p></li><li><p><strong>Una financiera tiene 70 saldos de tarjeta de un producto nuevo, sin historial de σ. ¿Qué procedimiento usa en Minitab?</strong></p><ol type="A"><li>Z de 1 muestra con σ = s</li><li>t de 1 muestra ✔</li><li>1 Proporción</li><li>Prueba de normalidad únicamente</li></ol><p class="nota">Si σ es desconocida se estima con s y se usa la distribución t con n − 1 gl (Estadísticas &gt; Estadísticas básicas &gt; t de 1 muestra).</p></li><li><p><strong>Verdadero o falso: un IC del 95 % significa que hay 95 % de probabilidad de que μ esté dentro del intervalo calculado.</strong></p><ol type="A"><li>Verdadero</li><li>Falso ✔</li></ol><p class="nota">Falso. La confianza es propiedad del método: el 95 % de los intervalos construidos en muestreos repetidos contendría a μ. Una vez calculado, el intervalo contiene o no a μ.</p></li><li><p><strong>Minitab, Z de 1 muestra: H0: μ = 3, H1: μ &lt; 3, Valor Z = −2.67, Valor p = 0.004, con α = 0.01. ¿Conclusión?</strong></p><ol type="A"><li>No se rechaza H0</li><li>Se rechaza H0: hay evidencia de que las latas contienen menos de 3 libras ✔</li><li>Se acepta H0</li><li>No se puede decidir sin el IC bilateral</li></ol><p class="nota">0.004 ≤ 0.01, se rechaza H0; los datos aportan evidencia de que la media es menor a 3 libras (procede acción contra la empresa).</p></li><li><p><strong>SPSS 25, Prueba T para una muestra (valor de prueba 7): t = 1.841, gl = 59, Sig. (bilateral) = 0.071. Si la hipótesis planteada de antemano es Ha: μ &gt; 7 con α = 0.05, ¿qué valor p y decisión corresponden?</strong></p><ol type="A"><li>0.071; no se rechaza</li><li>0.035; se rechaza H0 ✔</li><li>0.929; no se rechaza</li><li>0.142; no se rechaza</li></ol><p class="nota">t es positivo, apunta hacia Ha, así que el valor p de una cola es 0.071/2 ≈ 0.035 &lt; 0.05: se rechaza H0.</p></li><li><p><strong>Con la muestra 170, 165 y 175 (σ = 7.0711 conocida, n = 3, muestreo con reemplazo) se prueba H0: μ = 165 vs Ha: μ ≠ 165. Se obtiene z = 1.22 y valor p = 0.22. Con α = 0.05:</strong></p><ol type="A"><li>Se rechaza H0</li><li>No se rechaza H0 ✔</li><li>Se acepta H0 y se concluye que μ = 165</li><li>Hay error tipo I</li></ol><p class="nota">0.22 &gt; 0.05 y |1.22| &lt; 1.96: no se rechaza. No se 'acepta' H0; solo no hay evidencia suficiente de que difiera de 165.</p></li><li><p><strong>En el ejemplo de estaturas (μ verdadera = 165), la muestra 175, 170, 175 lleva a rechazar H0: μ = 165 (p = 0.041). ¿Qué ocurrió? (Suponer σ = 7.0711 conocida, n = 3, muestreo con reemplazo de la población de 5 estaturas.)</strong></p><ol type="A"><li>Decisión correcta</li><li>Error tipo I ✔</li><li>Error tipo II</li><li>Falta de normalidad</li></ol><p class="nota">Se rechazó una H0 verdadera: error tipo I, cuya probabilidad es α.</p></li><li><p><strong>Con la muestra 170, 165, 175 se prueba H0: μ = 175 (falsa, pues μ = 165) y no se rechaza (p = 0.22). ¿Qué error es y cómo se reduce? (Suponer σ = 7.0711 conocida, n = 3, muestreo con reemplazo de la población de 5 estaturas.)</strong></p><ol type="A"><li>Tipo I; bajando α</li><li>Tipo II; aumentando el tamaño de muestra ✔</li><li>Tipo II; bajando α</li><li>Tipo I; aumentando n</li></ol><p class="nota">No rechazar una H0 falsa es error tipo II (β); se reduce aumentando n; bajar α lo aumenta.</p></li><li><p><strong>Scheer quiere estimar la duración media con margen de 2 días al 95 % usando σ* = 6.84. ¿Qué tamaño de muestra necesita?</strong></p><ol type="A"><li>44</li><li>45 ✔</li><li>90</li><li>180</li></ol><p class="nota">n = (1.96 × 6.84 / 2)² = 44.9, que se redondea hacia arriba a 45.</p></li><li><p><strong>Pine Creek: 100 mujeres en 400 jugadores; históricamente 20 %. Se quiere saber si la proporción aumentó. ¿Qué hipótesis y procedimiento son correctos?</strong></p><ol type="A"><li>H0: p = 0.20, Ha: p ≠ 0.20; t de 1 muestra</li><li>H0: p ≤ 0.20, Ha: p &gt; 0.20; 1 Proporción con aproximación normal ✔</li><li>H0: p ≥ 0.20, Ha: p &lt; 0.20; Z de 1 muestra</li><li>H0: p &gt; 0.20, Ha: p ≤ 0.20; 1 Proporción exacta</li></ol><p class="nota">La dirección se declara desde el diseño (aumento) y la igualdad va en H0. np0 = 80 y n(1−p0) = 320 ≥ 5 permiten la aproximación normal. Como ilustración, con α = 0.05: z = (0.25 − 0.20)/√(0.2·0.8/400) = 2.50, valor p = 0.0062 &lt; 0.05, se rechaza H0.</p></li><li><p><strong>Si el IC del 95 % para μ va de 162 a 178, ¿qué ocurre con una prueba bilateral al 5 % de H0: μ = 161?</strong></p><ol type="A"><li>No se rechaza</li><li>Se rechaza, porque 161 está fuera del intervalo ✔</li><li>Depende de la desviación muestral</li><li>Se necesita una prueba de una cola</li></ol><p class="nota">Por la equivalencia IC–prueba bilateral, un μ0 fuera del IC de 100(1−α) % se rechaza al nivel α.</p></li><li><p><strong>Con 95 %, E = 2.5 % y p* = 0.50, la fórmula del libro pide 1 537 casos, pero la calculadora de SurveyMonkey con población de 100 000 pide 1 514. ¿Por qué?</strong></p><ol type="A"><li>La calculadora usa 90 % de confianza</li><li>La calculadora aplica la corrección por población finita ✔</li><li>La fórmula del libro tiene un error de redondeo</li><li>La calculadora usa la distribución t</li></ol><p class="nota">Al pedir el tamaño de la población reconoce que 100 000 no es infinito: n = n0/(1 + n0/N) = 1 536.6/1.0154 ≈ 1 513.3 → 1 514 (siempre se redondea hacia arriba). Con población muy grande vuelve a 1 537.</p></li><li><p><strong>¿Cuál es el valor crítico z para una prueba de UNA cola con α = 0.01?</strong></p><ol type="A"><li>2.5758</li><li>2.3263 ✔</li><li>1.6449</li><li>1.2816</li></ol><p class="nota">En una cola toda la α queda de un lado: z_0.01 = 2.3263. 2.5758 es el de dos colas al 1 % (0.005 por cola); 1.6449 es una cola al 5 %; 1.2816, una cola al 10 %.</p></li><li><p><strong>SPSS 25, Prueba T para una muestra con valor de prueba 7: t = +1.841, gl = 59, Sig. (bilateral) = 0.071. Si la hipótesis planteada de antemano fuera Ha: μ &lt; 7, ¿qué valor p corresponde?</strong></p><ol type="A"><li>0.035</li><li>0.071</li><li>0.965 ✔</li><li>0.142</li></ol><p class="nota">El signo de t (positivo) apunta en contra de Ha, así que no se divide: valor p = 1 − 0.0706/2 ≈ 0.965 (exacto 0.9647). Siempre es mayor que 0.5 y nunca lleva a rechazar; conviene reportar el número.</p></li><li><p><strong>Holiday Toys: n = 25, s = 11.79, error estándar 2.358, H0: μ = 40 bilateral con α = 0.05 (t_0.025 con 24 gl = 2.0639). ¿Para qué medias muestrales NO se rechazaría H0?</strong></p><ol type="A"><li>Entre 37.64 y 42.36</li><li>Entre 35.13 y 44.87 ✔</li><li>Entre 32.53 y 42.27</li><li>Entre 28.21 y 51.79</li></ol><p class="nota">40 ± 2.0639 × 2.358 = 40 ± 4.87 → 35.13 a 44.87. La media observada, 37.40, cae dentro (t = −1.10, p = 0.281), así que no se rechaza. 32.53–42.27 es el IC del 95 % alrededor de x̄, que contiene al 40: la misma decisión vista desde el otro lado.</p></li><li><p><strong>Cumming y Finch (2005): n = 36, media 62, s = 30, IC del 95 % de 51.85 a 72.15. ¿Qué ocurre con pruebas bilaterales al 5 % de H0: μ = 50 y H0: μ = 60?</strong></p><ol type="A"><li>Se rechazan ambas</li><li>Se rechaza μ = 50 y no se rechaza μ = 60 ✔</li><li>No se rechaza ninguna</li><li>Se rechaza μ = 60 y no se rechaza μ = 50</li></ol><p class="nota">Error estándar 30/√36 = 5; t con 35 gl = 2.03; margen 10.15. 50 queda fuera del intervalo (p &lt; 0.05, se rechaza) y 60 dentro (p &gt; 0.05, no se rechaza): equivalencia entre intervalo y prueba bilateral.</p></li><li><p><strong>Koçiu y Kodra (2021) necesitaban 350 PYMES (N = 2 814, e = 5 %) pero solo podían encuestar 154. ¿Qué hicieron y qué práctica ilustra la presentación con ello?</strong></p><ol type="A"><li>Mantuvieron el 95 % y reportaron margen de 5 %</li><li>Reportaron abiertamente un margen de 7.85 % (confianza 92.15 %): la ecuación se usa en ambos sentidos y se reporta lo realmente alcanzado ✔</li><li>Aumentaron la muestra con empresas de otra región</li><li>Usaron la distribución t para compensar</li></ol><p class="nota">El artículo dice que tuvieron que reducir la confianza a 92.15 % y subir el margen de 5 % a 7.85 %, y que con ese margen su fórmula da 154. Ojo: su fórmula es n = N/(1 + N e²), no la de Anderson del bloque 8 (ver advertencias).</p></li></ol>
+  <noscript><p>La autoevaluación necesita JavaScript.</p></noscript>
   </section>
   <section id="resultado" aria-labelledby="h-res"><h2 id="h-res">Resultado</h2>
   <p class="ev-marcador" id="ev-marcador">Aún no respondes ninguna pregunta.</p>
   <ol class="ev-lista" id="ev-lista"></ol>
   <div class="ev-b ev-acciones"><button type="button" id="ev-fallas">Repasar solo las incorrectas</button><button type="button" id="ev-todas" hidden>Ver todas</button><button type="button" id="ev-reinicia">Volver a empezar</button></div>
-  <p class="nota">Si fallaste preguntas de un tema, vuelve a la lección correspondiente de la <a href="modulo-5-guia.html#lecciones" target="diplomado">guía</a>. Esta autoevaluación no se califica: sirve para saber qué repasar antes de entregar la evidencia.</p>
+  <section class="ev-entrega" aria-labelledby="h-entrega"><h3 id="h-entrega">Exporta tu resultado en PDF y súbelo a Teams</h3>
+  <p>Cuando termines, escribe tu nombre completo y pulsa «Exportar mi resultado en PDF». En la ventana de impresión elige <strong>Guardar como PDF</strong> como destino y guárdalo con el nombre <strong>Autoevaluacion_Modulo5_TuNombre.pdf</strong>. Después súbelo a Teams, en la tarea del módulo 5. <span class="tag prop">Propuesta</span></p>
+  <label for="ev-nombre">Nombre completo</label>
+  <input type="text" id="ev-nombre" autocomplete="name" placeholder="Nombre y apellidos">
+  <div class="ev-b"><button type="button" id="ev-pdf" class="prim">Exportar mi resultado en PDF</button></div>
+  <p class="ev-aviso" id="ev-aviso" aria-live="polite" hidden></p>
+  <p class="nota">El PDF incluye tu nombre, la fecha y hora, el puntaje y, por pregunta, tu respuesta, si fue correcta y la respuesta correcta. Las preguntas sin responder aparecen como «Sin responder».</p>
+  </section>
+  <div class="ev-reporte" id="ev-reporte"></div>
+  <p class="nota">Si fallaste preguntas de un tema, vuelve a la lección correspondiente de la <a href="modulo-5-guia.html#lecciones" target="diplomado">guía</a> antes de entregar tu evidencia.</p>
   </section>
   <section id="repaso" aria-labelledby="h-repaso"><h2 id="h-repaso">Para cerrar: lo esencial y dónde leer más</h2>
   <h3>Lo esencial en cinco ideas</h3><ul class="ideas"><li>El error estándar (σ/√n) y el valor crítico (±1.96 al 95 %) son las dos piezas de todo margen de error.</li><li>Un intervalo de confianza es estimación puntual ± margen de error; la confianza es del método, no del intervalo concreto.</li><li>σ conocida usa z; σ desconocida usa t con n − 1 gl; las proporciones siempre usan z.</li><li>En una prueba se rechaza H0 si valor p ≤ α; si no, se dice 'no se rechaza', nunca 'se acepta'.</li><li>La cola de la prueba se decide antes de ver los datos: la misma t da p = .071 bilateral y .035 en una cola.</li></ul>
@@ -752,18 +769,18 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V2_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis</td></tr>
-      <tr><th scope="row">Versión</th><td>V2 (prototipo para revisión). V2: Se actualizan los enlaces a la guía y a la presentación nuevas; preguntas sin cambios. V1: primera versión de la autoevaluación como página propia (antes estaba dentro de la guía del módulo). Mismo diseño en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V3_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis</td></tr>
+      <tr><th scope="row">Versión</th><td>V3 (prototipo para revisión). V3: Exportación del resultado en PDF para subirlo a Teams: nombre del participante, fecha y hora, puntaje y, por pregunta, su respuesta, si fue correcta y la respuesta correcta; se retira la hoja de respuestas que antes salía al imprimir. V2: enlaces a la guía y presentación con portada homologada. V1: primera versión de la autoevaluación como página propia (antes estaba dentro de la guía del módulo). Mismo diseño en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 6 (17-09-2026): 19 preguntas con sus opciones, respuesta correcta y explicación, sin cambios de redacción; «Para cerrar»: las cinco ideas clave y las lecturas de esa misma sesión.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V1_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis.html (versión anterior); guía del módulo (2026_11_09_V5_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html); presentación (2026_11_09_V5_Modulo5_Intervalos_Pruebas_Hipotesis.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
-      <tr><th scope="row">Uso previsto</th><td>Autoevaluación formativa del módulo 5; no se califica.</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V2_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis.html (versión anterior); guía del módulo (2026_11_09_V6_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html); presentación (2026_11_09_V6_Modulo5_Intervalos_Pruebas_Hipotesis.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Uso previsto</th><td>Autoevaluación formativa del módulo 5; el participante exporta su resultado en PDF y lo sube a Teams [Propuesta].</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V2_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis · V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V3_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis · V3 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 
@@ -922,6 +939,24 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   document.addEventListener('keydown',function(ev){ if(ev.ctrlKey||ev.metaKey||ev.altKey||/input|textarea|select/i.test(ev.target.tagName)) return;
     if(ev.key==='ArrowRight'){ $('ev-sig').click(); } else if(ev.key==='ArrowLeft'){ $('ev-ant').click(); }
     else if(/^[1-8]$/.test(ev.key)){ var b=$('ev-o').querySelectorAll('button')[+ev.key-1]; if(b){ b.click(); b.focus(); } } });
+  var nom=$('ev-nombre'), NK=P+'-nombre', MOD=5, ARCH="2026_11_09_V3_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis \u00b7 V3";
+  try{ nom.value=localStorage.getItem(NK)||''; }catch(e){}
+  nom.addEventListener('input',function(){ try{localStorage.setItem(NK,nom.value);}catch(e){} });
+  function esc(t){ var d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+  function reporte(){ var n=0,b=0; Q.forEach(function(q,i){ if(r[i]!==undefined){ n++; if(r[i]===q.c) b++; } });
+    var f=new Date(), fecha=f.toLocaleDateString('es-MX',{day:'2-digit',month:'long',year:'numeric'})+' · '+f.toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit',hour12:false})+' h';
+    var h='<h2>Resultado de la autoevaluación · Módulo '+MOD+'</h2><dl><dt>Participante</dt><dd>'+esc(nom.value.trim()||'(sin nombre)')+'</dd><dt>Fecha y hora</dt><dd>'+esc(fecha)+'</dd>'+
+      '<dt>Puntaje</dt><dd>'+b+' correctas de '+Q.length+' preguntas ('+Math.round(100*b/Q.length)+' %) · respondidas: '+n+' de '+Q.length+'</dd><dt>Archivo</dt><dd>'+esc(ARCH)+'</dd></dl>'+
+      '<table><thead><tr><th>#</th><th>Pregunta</th><th>Tu respuesta</th><th>Resultado</th><th>Respuesta correcta</th></tr></thead><tbody>';
+    Q.forEach(function(q,i){ var a=r[i], res=a===undefined?'Sin responder':(a===q.c?'Correcta':'Incorrecta'), cl=a===undefined?'':(a===q.c?'ok':'mal');
+      h+='<tr><td>'+(i+1)+'</td><td>'+esc(q.e)+'</td><td>'+(a===undefined?'—':L[a]+'. '+esc(q.o[a]))+'</td><td class="'+cl+'">'+res+'</td><td>'+L[q.c]+'. '+esc(q.o[q.c])+'</td></tr>'; });
+    $('ev-reporte').innerHTML=h+'</tbody></table>'; return n; }
+  window.addEventListener('beforeprint',reporte);
+  $('ev-pdf').onclick=function(){ var av=$('ev-aviso');
+    if(!nom.value.trim()){ av.hidden=false; av.textContent='Escribe tu nombre completo antes de exportar.'; nom.focus(); return; }
+    var n=reporte(); av.hidden=n===Q.length; av.textContent=n<Q.length?('Te faltan '+(Q.length-n)+' preguntas: aparecerán como «Sin responder» en el PDF.'):'';
+    window.print(); };
+  document.addEventListener('restablecer',function(){ nom.value=''; $('ev-aviso').hidden=true; });
   try{ window.name='diplomado-evaluacion'; }catch(e){}
   pinta(); resultado(); avance();
 })();

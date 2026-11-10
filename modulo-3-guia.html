@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V2";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V3";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -691,12 +691,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 3 · Estadística descriptiva con medidas numéricas</h1>
   <p class="subtitulo">Guía de estudio del módulo</p>
   <p class="subtitulo">Aplicada a la investigación en competitividad empresarial · Instructor: Pavel Raúl Dennis Quiñonez</p>
-  <p class="meta">V2 · borrador para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V3 · borrador para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="como-leer"><h2 id="como-leer">Cómo usar este módulo</h2>
-  <p class="aviso-in no-imprimir"><strong>Borrador V2.</strong> Guía armada con el material de la sesión del 03-09-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
+  <p class="aviso-in no-imprimir"><strong>Borrador V3.</strong> Guía armada con el material de la sesión del 03-09-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
   <p>Tres pasos: <strong>1)</strong> revisa lo esencial y las claves del módulo; <strong>2)</strong> estudia la presentación lección por lección y marca «Ya lo entendí»; <strong>3)</strong> practica la lectura guiada, contesta la autoevaluación y entrega tu evidencia.</p>
   <section class="objetivos" aria-labelledby="obj-m"><h3 id="obj-m">Al terminar el módulo podrás</h3><ol><li>Al terminar podrás calcular e interpretar media, mediana, moda, percentiles y cuartiles, y explicar por qué la mediana es preferible ante valores extremos.</li><li>Al terminar podrás calcular rango, RIC, varianza, desviación estándar y coeficiente de variación, y elegir el CV para comparar variabilidad entre escalas distintas.</li><li>Al terminar podrás interpretar el sesgo, calcular valores z y aplicar el teorema de Chebyshev y la regla empírica.</li><li>Al terminar podrás construir un resumen de cinco números y un diagrama de caja, y detectar atípicos con la regla de 1.5·RIC o con |z| &gt; 3.</li><li>Al terminar podrás interpretar covarianza y coeficiente de correlación de Pearson (incluida una tabla de Correlaciones de SPSS) sin confundir asociación con causalidad.</li><li>Al terminar podrás calcular una media ponderada y la media/varianza aproximadas de datos agrupados.</li><li>Al terminar podrás obtener estas medidas en SPSS (Frecuencias, Descriptivos, Explorar, Calcular variable) y reconocer por qué los cuartiles de SPSS pueden diferir de los del libro.</li><li>Al terminar podrás elegir entre histograma, dispersión, matriz de dispersión, pirámide y mapa de calor según el número y tipo de variables.</li></ol>
     <div class="progreso" aria-label="Avance del módulo 3"><i id="barra-avance"></i></div></section>
@@ -854,6 +854,7 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <section id="autoevaluacion" aria-labelledby="h-auto"><h2 id="h-auto">Autoevaluación</h2>
   <p>19 preguntas de opción múltiple sobre lo esencial del módulo. Están en su propia página para que cada pregunta y sus opciones se lean completas, una a la vez, con la explicación al responder y tu resultado al final. Tu avance se guarda en este navegador.</p>
   <p class="lec-ini"><a class="boton-entrar" href="modulo-3-autoevaluacion.html" target="diplomado-evaluacion">Abrir la autoevaluación →</a></p>
+  <p>Al terminar, exporta tu resultado en PDF desde la misma página (botón «Exportar mi resultado en PDF», con tu nombre) y súbelo a Teams, en la tarea del módulo. <span class="tag prop">Propuesta</span></p>
   <p class="nota">Se abre en otra pestaña; esta guía sigue a la mano para repasar.</p>
   </section>
   <section id="cuidado" aria-labelledby="h-cuidado"><h2 id="h-cuidado">Errores que más cuestan</h2><ul><li>Los percentiles de SPSS (3 457.5 y 3 625 en sueldos) no coinciden con los cuartiles del libro (3 465 y 3 600). No es error: son convenciones distintas. Indica el método.</li><li>Para P(X ≥ 84) no basta 1 − z: hay que usar 1 − CDF.NORMAL(84, 76.5, 7.01) ≈ 0.142. Una probabilidad negativa es señal inequívoca de fórmula mal planteada.</li><li>Los dos criterios de atípicos pueden discrepar: en Visa, 1.5·RIC marca 4 135 y 7 450, pero ningún |z| supera 3 (máximo 2.95). Reporta el criterio usado.</li><li>No compares la dispersión de variables con medias o escalas distintas mediante la desviación estándar; usa el coeficiente de variación.</li><li>La regla empírica (cerca de 68 %, 95 % y casi todos) solo vale con forma de campana; Chebyshev vale siempre, pero da mínimos (al menos 75 % a ±2 s). No mezcles ambas cotas.</li><li>Una covarianza grande no implica una relación fuerte, porque depende de las unidades; la fuerza se juzga con el coeficiente de correlación.</li></ul></section>
@@ -880,20 +881,20 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V2_Modulo3_Guia_Medidas_Numericas</td></tr>
-      <tr><th scope="row">Versión</th><td>V2 (borrador para revisión). V2: Se actualizan los enlaces a la presentación con la portada y la paleta de colores homologadas del diplomado; contenido sin cambios. V1: Primera versión, con la plantilla común de guía de módulo y la autoevaluación en página propia. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V3_Modulo3_Guia_Medidas_Numericas</td></tr>
+      <tr><th scope="row">Versión</th><td>V3 (borrador para revisión). V3: La sección Autoevaluación indica exportar el resultado en PDF y subirlo a Teams; se actualizan los enlaces a la presentación sin menciones del curso doctoral y a la autoevaluación nueva. Versión anterior: portada y paleta de colores homologadas. V1: Primera versión, con la plantilla común de guía de módulo y la autoevaluación en página propia. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 4 (03-09-2026): 8 objetivos, 5 ideas clave, 17 conceptos, 23 fórmulas, 11 procedimientos, 6 errores clave, 19 preguntas, 2 videos y 8 bases; auditado en las versiones V2 a V8 de esa guía. Se muestran las versiones condensadas de la vista de estudio; las referencias internas (transcripciones y archivos de trabajo) constan en la guía de origen.</td></tr>
       <tr><th scope="row">Excluido a propósito</th><td>Pendientes y dudas personales, énfasis del profesor y observaciones sobre capturas propias: son notas de estudio de Eduardo y no aplican al participante.</td></tr>
       <tr><th scope="row">Pendientes</th><td>Visto bueno del instructor (Pavel Raúl Dennis Quiñonez) sobre la guía, la evidencia propuesta, las 11 láminas agregadas y el uso de su presentación; confirmar con el instructor la identificación del artículo Alfadhel (2025); la portada de la presentación corresponde al curso doctoral; el registro pide aplicación a la competitividad empresarial y los ejemplos son del libro; visto bueno de Identidad Institucional.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V1_Modulo3_Guia_Medidas_Numericas.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 4; plantilla común de guía de módulo (la misma de los módulos 2, 4, 5 y 6); presentación del módulo (2026_11_09_V2_Modulo3_Medidas_Numericas.html); autoevaluación del módulo (2026_11_09_V2_Modulo3_Autoevaluacion_Medidas_Numericas.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V2_Modulo3_Guia_Medidas_Numericas.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 4; plantilla común de guía de módulo (la misma de los módulos 2, 4, 5 y 6); presentación del módulo (2026_11_09_V3_Modulo3_Medidas_Numericas.html); autoevaluación del módulo (2026_11_09_V3_Modulo3_Autoevaluacion_Medidas_Numericas.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
       <tr><th scope="row">Uso previsto</th><td>Guía del módulo 3 para revisión del instructor y la coordinación.</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V2_Modulo3_Guia_Medidas_Numericas · V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V3_Modulo3_Guia_Medidas_Numericas · V3 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 

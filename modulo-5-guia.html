@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V5";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V6";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -691,12 +691,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 5 · Estimación por intervalo y pruebas de hipótesis</h1>
   <p class="subtitulo">Guía de estudio del módulo</p>
   <p class="subtitulo">Aplicadas a la investigación de las ciencias administrativas · Instructor: Pedro David Sánchez Pérez</p>
-  <p class="meta">V5 · prototipo para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V6 · prototipo para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="como-leer"><h2 id="como-leer">Cómo usar este módulo</h2>
-  <p class="aviso-in no-imprimir"><strong>Prototipo V5.</strong> Guía armada con el material de la sesión del 17-09-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
+  <p class="aviso-in no-imprimir"><strong>Prototipo V6.</strong> Guía armada con el material de la sesión del 17-09-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p>
   <p>Tres pasos: <strong>1)</strong> revisa lo esencial y la regla de decisión; <strong>2)</strong> estudia la presentación lección por lección y marca «Ya lo entendí»; <strong>3)</strong> practica la lectura guiada, contesta la autoevaluación y entrega tu evidencia.</p>
   <section class="objetivos" aria-labelledby="obj-m"><h3 id="obj-m">Al terminar el módulo podrás</h3><ol><li>Explicar qué es el error estándar y por qué disminuye al crecer n (σ/√n).</li><li>Obtener el valor crítico z<sub>α/2</sub> (1.96 al 95 %) y t<sub>α/2</sub> con n−1 gl, y saber cuándo usar cada uno.</li><li>Construir e interpretar correctamente un intervalo de confianza para μ (σ conocida y desconocida) y para p.</li><li>Calcular el tamaño de muestra necesario para un margen de error dado (media y proporción).</li><li>Formular H0 y Ha (una o dos colas) a partir de la pregunta de investigación.</li><li>Aplicar la regla de decisión del valor p (rechazar H0 si valor p ≤ α) y la del valor crítico, y redactar la conclusión sin 'aceptar H0'.</li><li>Distinguir error tipo I (α) y error tipo II (β).</li><li>Ejecutar en Minitab Z/t de 1 muestra y 1 Proporción, y en SPSS 25 Explorar y Prueba T para una muestra, leyendo la salida relevante.</li><li>Usar la equivalencia entre intervalo de confianza y prueba de hipótesis bilateral.</li></ol>
     <div class="progreso" aria-label="Avance del módulo 5"><i id="barra-avance"></i></div></section>
@@ -828,6 +828,7 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <section id="autoevaluacion" aria-labelledby="h-auto"><h2 id="h-auto">Autoevaluación</h2>
   <p>19 preguntas de opción múltiple sobre lo esencial del módulo. Están en su propia página para que cada pregunta y sus opciones se lean completas, una a la vez, con la explicación al responder y tu resultado al final. Tu avance se guarda en este navegador.</p>
   <p class="lec-ini"><a class="boton-entrar" href="modulo-5-autoevaluacion.html" target="diplomado-evaluacion">Abrir la autoevaluación →</a></p>
+  <p>Al terminar, exporta tu resultado en PDF desde la misma página (botón «Exportar mi resultado en PDF», con tu nombre) y súbelo a Teams, en la tarea del módulo. <span class="tag prop">Propuesta</span></p>
   <p class="nota">Se abre en otra pestaña; esta guía sigue a la mano para repasar.</p>
   </section>
   <section id="cuidado" aria-labelledby="h-cuidado"><h2 id="h-cuidado">Errores que más cuestan</h2><ul><li>No escribas 'se acepta H0': di 'no se rechaza H0'. No rechazar solo indica evidencia insuficiente, porque el error tipo II no está controlado.</li><li>No digas 'hay 95 % de probabilidad de que μ esté entre A y B'; lo correcto es 'con 95 % de confianza, μ está entre A y B'.</li><li>SPSS 25 solo reporta Sig. (bilateral). Para una cola, primero verifica que el signo de t apunte hacia Ha y después divide entre 2; si apunta en contra, p = 1 − Sig./2.</li><li>Decide una o dos colas desde la pregunta de investigación, antes de ver los datos; elegirla después de ver el resultado infla el α real.</li><li>En 1 Proporción, Minitab puede contar como evento la categoría que no te interesa (Male en vez de Female). Revisa cuántos eventos contó o usa Datos resumidos.</li><li>En la prueba de una proporción el error estándar usa p0 (el valor de H0); en el intervalo de confianza usa p̄.</li></ul></section>
@@ -854,20 +855,20 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V5_Modulo5_Guia_Intervalos_Pruebas_Hipotesis</td></tr>
-      <tr><th scope="row">Versión</th><td>V5 (prototipo para revisión). V5: Se actualizan los enlaces a la presentación con la portada y la paleta de colores homologadas del diplomado; contenido sin cambios. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V6_Modulo5_Guia_Intervalos_Pruebas_Hipotesis</td></tr>
+      <tr><th scope="row">Versión</th><td>V6 (prototipo para revisión). V6: La sección Autoevaluación indica exportar el resultado en PDF y subirlo a Teams; se actualizan los enlaces a la presentación sin menciones del curso doctoral y a la autoevaluación nueva. Versión anterior: portada y paleta de colores homologadas. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 6 (17-09-2026): 9 objetivos, 5 ideas clave, 23 conceptos, 14 fórmulas, 12 procedimientos, 6 errores clave, 19 preguntas, 2 videos y 12 bases; auditado en las versiones V2 a V8 de esa guía. Se muestran las versiones condensadas de la vista de estudio; las referencias internas (transcripciones y archivos de trabajo) constan en la guía de origen.</td></tr>
       <tr><th scope="row">Excluido a propósito</th><td>Pendientes y dudas personales, énfasis del profesor y observaciones sobre capturas propias: son notas de estudio de Eduardo y no aplican al participante.</td></tr>
       <tr><th scope="row">Pendientes</th><td>Visto bueno del instructor (Pedro David Sánchez Pérez) sobre la guía, la evidencia propuesta y el uso de su presentación; la portada de la presentación corresponde al curso doctoral; visto bueno de Identidad Institucional.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V4_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html (versión anterior); 2026_11_09_V1_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html (V1, estructura previa); guía de estudio V8, sesión 6; plantilla común de guía de módulo; presentación del módulo (2026_11_09_V5_Modulo5_Intervalos_Pruebas_Hipotesis.html); autoevaluación del módulo (2026_11_09_V2_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V5_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html (versión anterior); 2026_11_09_V1_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html (V1, estructura previa); guía de estudio V8, sesión 6; plantilla común de guía de módulo; presentación del módulo (2026_11_09_V6_Modulo5_Intervalos_Pruebas_Hipotesis.html); autoevaluación del módulo (2026_11_09_V3_Modulo5_Autoevaluacion_Intervalos_Pruebas_Hipotesis.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
       <tr><th scope="row">Uso previsto</th><td>Guía del módulo 5 para revisión del instructor y la coordinación.</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V5_Modulo5_Guia_Intervalos_Pruebas_Hipotesis · V5 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V6_Modulo5_Guia_Intervalos_Pruebas_Hipotesis · V6 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 

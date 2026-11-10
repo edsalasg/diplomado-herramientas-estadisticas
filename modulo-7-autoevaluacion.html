@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V2";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V3";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -657,8 +657,17 @@ table.spss th[scope=row],table.spss caption{text-align:left}
 .ev-marcador{font-size:clamp(1.3rem,1.1rem + 1vw,2rem);font-weight:700;color:var(--titulo);margin:.2em 0;text-align:left}
 .ev-lista{padding-left:1.4em}.ev-lista li{margin:.5em 0;text-align:left}
 .ev-lista .est{font-weight:700}.ev-lista .est.ok{color:var(--verde)}.ev-lista .est.mal{color:var(--rojo)}
-.ev-hoja{display:none}
-@media print{.ev-tarjeta,.ev-tablero,.ev-b,.ev-acciones,#resultado{display:none!important}.ev-hoja{display:block}.ev-hoja>li{break-inside:avoid;margin:.6em 0}}
+.ev-entrega{margin:1.2em 0 0;padding:1em 1.1em;border:1px solid var(--linea);border-left:6px solid var(--unison-oro);border-radius:var(--radio);background:var(--superficie);max-width:62rem}
+.ev-entrega h3{margin-top:0}
+.ev-entrega label{display:block;font-weight:700;margin:.4em 0 .3em}
+.ev-entrega input{width:min(100%,32rem);padding:.55em .7em;font:inherit;border:1px solid var(--linea);border-radius:8px;background:var(--fondo);color:var(--texto)}
+.ev-aviso{margin:.6em 0 0;font-weight:700;color:var(--rojo)}
+.ev-reporte{display:none}
+.ev-reporte table{width:100%;border-collapse:collapse;font-size:.92em}
+.ev-reporte th,.ev-reporte td{border:1px solid #BFC5CC;padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-reporte .ok{color:#1E8449;font-weight:700}.ev-reporte .mal{color:#C0392B;font-weight:700}
+.ev-reporte dl{display:grid;grid-template-columns:max-content 1fr;gap:.25em 1em;margin:0 0 1em}.ev-reporte dt{font-weight:700}.ev-reporte dd{margin:0}
+@media print{main>section:not(#resultado){display:none!important}#resultado>*:not(.ev-reporte){display:none!important}#resultado .sig-seccion{display:none!important}.ev-reporte{display:block!important}#resultado,.ev-reporte,.ev-reporte table,.ev-reporte tbody{break-inside:auto!important;page-break-inside:auto!important}.ev-reporte tr{break-inside:avoid}}
 </style>
 <meta name="robots" content="noindex, nofollow">
 </head>
@@ -715,12 +724,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 7 · Autoevaluación</h1>
   <p class="subtitulo">Chi cuadrada y tabulaciones cruzadas</p>
   <p class="subtitulo">Aplicadas a la investigación del comportamiento del consumidor · Instructor: Maritza Moreno Grano</p>
-  <p class="meta">V2 · borrador para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V3 · borrador para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="h-como"><h2 id="h-como">Cómo funciona</h2>
-  <p>14 preguntas, una a la vez. Elige una opción: se marca en verde la correcta y aparece la explicación. Puedes ir y volver con los botones, con los números del tablero o con las flechas ← y → del teclado; las teclas 1 a 4 eligen la opción. Tus respuestas se guardan en este navegador; «Volver a empezar» las borra.</p>
+  <p>14 preguntas, una a la vez. Elige una opción: se marca en verde la correcta y aparece la explicación. Puedes ir y volver con los botones, con los números del tablero o con las flechas ← y → del teclado; las teclas 1 a 4 eligen la opción. Tus respuestas se guardan en este navegador; «Volver a empezar» las borra. <strong>Al terminar, exporta tu resultado en PDF y súbelo a Teams</strong> (sección Resultado).</p>
   <p class="nota">Antes de empezar, repasa la <a href="modulo-7-guia.html" target="diplomado">guía del módulo</a> y la <a href="modulo-7.html" target="diplomado-presentacion">presentación</a>. Preguntas de la guía de estudio V8, sesión 8, con su explicación verificada contra el material de la sesión <span class="tag v">Verificable</span></p>
   </section>
   <section id="preguntas" aria-labelledby="h-preg"><h2 id="h-preg">Preguntas</h2>
@@ -732,14 +741,22 @@ table.spss th[scope=row],table.spss caption{text-align:left}
     <div class="ev-x" id="ev-x" hidden></div>
     <div class="ev-b"><button type="button" id="ev-ant">← Anterior</button><button type="button" id="ev-sig" class="prim">Siguiente →</button><button type="button" id="ev-fin">Ver mi resultado</button></div>
   </article>
-  <noscript><p>La autoevaluación necesita JavaScript. Al imprimir esta página se obtiene la hoja completa con las respuestas.</p></noscript>
-  <ol class="ev-hoja"><li><p><strong>Quieres saber si el sexo del estudiante (hombre/mujer) está asociado con participar en actividades extracurriculares (sí/no). ¿Qué prueba corresponde?</strong></p><ol type="A"><li>Prueba chi-cuadrado de independencia con una tabla cruzada ✔</li><li>Prueba t para muestras independientes</li><li>Prueba chi-cuadrado de bondad de ajuste sobre la variable sexo</li><li>Prueba de Levene</li></ol><p class="nota">Ambas variables son categóricas y la pregunta es si están relacionadas: es una prueba de independencia sobre una tabla de contingencia. La bondad de ajuste usa una sola variable.</p></li><li><p><strong>En la prueba chi-cuadrado de independencia, ¿cuál es la hipótesis nula?</strong></p><ol type="A"><li>Las dos variables están relacionadas</li><li>Las frecuencias observadas son mayores que las esperadas</li><li>Las dos variables son independientes ✔</li><li>Las medias de los grupos son iguales</li></ol><p class="nota">H0 siempre plantea independencia (no relación); Ha plantea que las variables están relacionadas.</p></li><li><p><strong>En Alber's Brewery hay 80 hombres, 70 consumidores prefieren la cerveza clara y n = 150. ¿Cuál es la frecuencia esperada de 'Hombre – Clara' bajo independencia?</strong></p><ol type="A"><li>40.00</li><li>26.67</li><li>46.67</li><li>37.33 ✔</li></ol><p class="nota">e = (total fila × total columna)/n = (80 × 70)/150 = 37.33. El 40 es la frecuencia observada.</p></li><li><p><strong>La tabla Party (3 categorías) × Pay Cut (Sí/No) tiene ¿cuántos grados de libertad?</strong></p><ol type="A"><li>1</li><li>2 ✔</li><li>3</li><li>5</li></ol><p class="nota">gl = (r − 1)(c − 1) = (3 − 1)(2 − 1) = 2, como muestra la columna df de SPSS.</p></li><li><p><strong>Ejemplo del color favorito: χ² = 2.5 con 6 categorías y α = 0.05. ¿Qué se concluye?</strong></p><ol type="A"><li>No se rechaza H0, porque 2.5 &lt; 11.070 (gl = 5) ✔</li><li>Se rechaza H0, porque 2.5 &gt; 0.05</li><li>Se rechaza H0, porque 2.5 &gt; 1.145</li><li>No se puede decidir sin SPSS</li></ol><p class="nota">gl = 6 − 1 = 5; el crítico con área 0.05 en la cola superior es 11.070. Como 2.5 &lt; 11.070, no hay evidencia de un color favorito (p recalculado = .776). Comparar χ² contra α es un error.</p></li><li><p><strong>Ejemplo del café (tabla 2 × 2, n = 100): χ² = 2.9005. ¿Cuál es la decisión con α = 0.05?</strong></p><ol type="A"><li>Se rechaza H0, porque 2.9005 &gt; 1</li><li>Se rechaza H0, porque 2.9005 &gt; 2.706</li><li>No se rechaza H0, porque 2.9005 &lt; 5.991</li><li>No se rechaza H0, porque 2.9005 &lt; 3.841 ✔</li></ol><p class="nota">gl = (2 − 1)(2 − 1) = 1 y el crítico es 3.841. No hay evidencia suficiente de relación entre género y gusto por el café (p recalculado = .089). El 2.706 corresponde a α = 0.10 y el 5.991 a gl = 2.</p></li><li><p><strong>SPSS para Party × Pay Cut: Chi-cuadrado de Pearson 10.187, df 2, Sig. .006; nota: '0 casillas (.0 %) han esperado un recuento menor que 5. El recuento mínimo esperado es 5.51'. ¿Qué concluyes con α = 0.05?</strong></p><ol type="A"><li>No se rechaza H0: las variables son independientes</li><li>Se rechaza H0, pero no puede interpretarse porque una casilla tiene esperado 5.51</li><li>Se rechaza H0: la afiliación partidista y la opinión sobre reducir el sueldo están asociadas; el supuesto de esperadas se cumple ✔</li><li>Se rechaza H0: ser republicano causa apoyar la reducción</li></ol><p class="nota">Sig. = .006 ≤ .05 → se rechaza la independencia. Que el mínimo esperado sea 5.51 cumple la regla de al menos 5. La prueba muestra asociación, no causalidad.</p></li><li><p><strong>Party × Lobbyists: χ² = 3.719, df 2, Sig. .156. ¿Cuál es la redacción correcta?</strong></p><ol type="A"><li>Se acepta H0: la afiliación y la opinión sobre el cabildeo son independientes</li><li>No se rechaza H0: no hay evidencia suficiente de asociación entre afiliación y opinión sobre el cabildeo ✔</li><li>Se rechaza H0, porque 3.719 &gt; .156</li><li>El resultado es significativo a una cola (.156/2 = .078)</li></ol><p class="nota">Con p &gt; α no se rechaza H0, pero eso no prueba independencia: el resultado es inconcluso. Comparar χ² con Sig. carece de sentido, y la prueba es de cola superior, así que no se divide el p entre 2.</p></li><li><p><strong>Verdadero o falso: como SPSS rotula la columna 'Significación asintótica (bilateral)', en la prueba de independencia hay que dividir ese valor entre 2 para obtener el p de una cola.</strong></p><ol type="A"><li>Verdadero</li><li>Falso ✔</li></ol><p class="nota">Falso. La prueba de independencia siempre es de cola superior y el valor que reporta SPSS ya es esa área: Alber's χ² = 6.122 → .047, igual al 0.047 de Minitab en Anderson (figura 12.1).</p></li><li><p><strong>La tabla 'Pruebas de chi-cuadrado' de Cerveceria muestra tres filas: Pearson 6.122 (.047), Razón de verosimilitud 6.178 (.046) y Asociación lineal por lineal 5.872 (.015). ¿Cuál se reporta para la prueba de independencia vista en clase?</strong></p><ol type="A"><li>Asociación lineal por lineal, porque tiene el p más pequeño</li><li>La razón de verosimilitud, porque es la más precisa</li><li>Las tres, sumadas</li><li>Chi-cuadrado de Pearson, con su valor, df y Sig. ✔</li></ol><p class="nota">La diapositiva 31 pide leer la fila 'Chi-cuadrado de Pearson' (Valor, gl, Sig.), y la Guía [Página 7] revisa esas mismas tres columnas. La fila lineal por lineal supone categorías ordenadas y aquí son nominales; elegir la fila por tener el p más pequeño es un error.</p></li><li><p><strong>En Party × Pay Cut se rechazó H0. ¿Qué describe mejor la dirección de la asociación?</strong></p><ol type="A"><li>Los republicanos dicen Sí con más fuerza (86.7 %, contra 61.1 % de los demócratas y 52.6 % de los independientes) ✔</li><li>Los independientes apoyan más la medida (52.6 %)</li><li>Todos los partidos apoyan por igual (71 %)</li><li>La χ² no permite describir nada más</li></ol><p class="nota">La dirección se lee con porcentajes de fila u observadas contra esperadas: los republicanos tienen 39 Sí contra 31.9 esperados y 6 No contra 13.1. La Guía concluye que apoyan la medida con mucha más fuerza que los independientes.</p></li><li><p><strong>¿Por qué el estadístico χ² nunca puede ser negativo?</strong></p><ol type="A"><li>Porque las frecuencias esperadas siempre son mayores que las observadas</li><li>Porque SPSS reporta el valor absoluto</li><li>Porque cada diferencia (fo − fe) se eleva al cuadrado y se divide entre una fe positiva antes de sumar ✔</li><li>Porque los grados de libertad son positivos</li></ol><p class="nota">Al elevar al cuadrado, las diferencias 'de más' y 'de menos' no se cancelan y todo se vuelve positivo. Por eso la χ² va de 0 a infinito.</p></li><li><p><strong>Hardwicke et al. (2022) reportan edad × usaría casco: χ² = 10.752, p = 0.004 ('sí': 18-30 100.0 %, 31-49 96.4 %, 50+ 90.4 %). ¿Qué afirmación es correcta?</strong></p><ol type="A"><li>Cumplir 50 años causa dejar de usar casco</li><li>Edad e intención de usar casco no se comportan como independientes en la muestra; la intención es menor en el grupo de 50+ ✔</li><li>No hay asociación, porque los tres porcentajes superan el 90 %</li><li>La prueba tiene gl = 5</li></ol><p class="nota">p = 0.004 &lt; 0.05 → se rechaza H0. Es asociación, no causalidad. Con 3 grupos × 2 respuestas, gl = 2 (y con gl = 2, χ² = 10.752 da p = .0046).</p></li><li><p><strong>Tarea 1 (Student Performance, n = 649): Sexo × Actividades extracurriculares da χ²(1) = 10.09, p = .001, y 0 % de casillas con esperado &lt; 5. Participan el 56.0 % de los hombres y el 43.3 % de las mujeres. ¿Conclusión con α = 0.05?</strong></p><ol type="A"><li>No se rechaza H0</li><li>Se rechaza H0: las mujeres participan más</li><li>No puede interpretarse por violación del supuesto</li><li>Se rechaza H0: sexo y participación en actividades están asociados; los hombres participan en mayor proporción ✔</li></ol><p class="nota">p = .001 ≤ .05 → se rechaza la independencia. Las esperadas mínimas (129.11) cumplen el supuesto, y los porcentajes de fila muestran la dirección: 56.0 % contra 43.3 %.</p></li></ol>
+  <noscript><p>La autoevaluación necesita JavaScript.</p></noscript>
   </section>
   <section id="resultado" aria-labelledby="h-res"><h2 id="h-res">Resultado</h2>
   <p class="ev-marcador" id="ev-marcador">Aún no respondes ninguna pregunta.</p>
   <ol class="ev-lista" id="ev-lista"></ol>
   <div class="ev-b ev-acciones"><button type="button" id="ev-fallas">Repasar solo las incorrectas</button><button type="button" id="ev-todas" hidden>Ver todas</button><button type="button" id="ev-reinicia">Volver a empezar</button></div>
-  <p class="nota">Si fallaste preguntas de un tema, vuelve a la lección correspondiente de la <a href="modulo-7-guia.html#lecciones" target="diplomado">guía</a>. Esta autoevaluación no se califica: sirve para saber qué repasar antes de entregar la evidencia.</p>
+  <section class="ev-entrega" aria-labelledby="h-entrega"><h3 id="h-entrega">Exporta tu resultado en PDF y súbelo a Teams</h3>
+  <p>Cuando termines, escribe tu nombre completo y pulsa «Exportar mi resultado en PDF». En la ventana de impresión elige <strong>Guardar como PDF</strong> como destino y guárdalo con el nombre <strong>Autoevaluacion_Modulo7_TuNombre.pdf</strong>. Después súbelo a Teams, en la tarea del módulo 7. <span class="tag prop">Propuesta</span></p>
+  <label for="ev-nombre">Nombre completo</label>
+  <input type="text" id="ev-nombre" autocomplete="name" placeholder="Nombre y apellidos">
+  <div class="ev-b"><button type="button" id="ev-pdf" class="prim">Exportar mi resultado en PDF</button></div>
+  <p class="ev-aviso" id="ev-aviso" aria-live="polite" hidden></p>
+  <p class="nota">El PDF incluye tu nombre, la fecha y hora, el puntaje y, por pregunta, tu respuesta, si fue correcta y la respuesta correcta. Las preguntas sin responder aparecen como «Sin responder».</p>
+  </section>
+  <div class="ev-reporte" id="ev-reporte"></div>
+  <p class="nota">Si fallaste preguntas de un tema, vuelve a la lección correspondiente de la <a href="modulo-7-guia.html#lecciones" target="diplomado">guía</a> antes de entregar tu evidencia.</p>
   </section>
   <section id="repaso" aria-labelledby="h-repaso"><h2 id="h-repaso">Para cerrar: lo esencial y dónde leer más</h2>
   <h3>Lo esencial en cinco ideas</h3><ul class="ideas"><li>La chi-cuadrado compara frecuencias observadas con las esperadas si no hubiera relación: a mayor distancia, mayor χ².</li><li>Con dos variables categóricas, H0 dice que son independientes; gl = (filas − 1)(columnas − 1) y la prueba es de cola superior.</li><li>En SPSS: Tablas cruzadas con Chi-cuadrado; se lee la fila de Pearson y se rechaza H0 si Sig. ≤ .05.</li><li>Antes de concluir, revisa la nota al pie: las frecuencias esperadas deben ser al menos 5 en cada casilla.</li><li>No rechazar H0 no prueba independencia; rechazarla indica asociación, no causalidad. La dirección se lee con porcentajes de fila.</li></ul>
@@ -752,18 +769,18 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V2_Modulo7_Autoevaluacion_Chi_Cuadrada</td></tr>
-      <tr><th scope="row">Versión</th><td>V2 (borrador para revisión). V2: Se actualizan los enlaces a la guía y a la presentación nuevas; preguntas sin cambios. V1: primera versión de la autoevaluación como página propia (antes estaba dentro de la guía del módulo). Mismo diseño en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V3_Modulo7_Autoevaluacion_Chi_Cuadrada</td></tr>
+      <tr><th scope="row">Versión</th><td>V3 (borrador para revisión). V3: Exportación del resultado en PDF para subirlo a Teams: nombre del participante, fecha y hora, puntaje y, por pregunta, su respuesta, si fue correcta y la respuesta correcta; se retira la hoja de respuestas que antes salía al imprimir. V2: enlaces a la guía y presentación con portada homologada. V1: primera versión de la autoevaluación como página propia (antes estaba dentro de la guía del módulo). Mismo diseño en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 8 (01-10-2026): 14 preguntas con sus opciones, respuesta correcta y explicación, sin cambios de redacción; «Para cerrar»: las cinco ideas clave y las lecturas de esa misma sesión.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V1_Modulo7_Autoevaluacion_Chi_Cuadrada.html (versión anterior); guía del módulo (2026_11_09_V2_Modulo7_Guia_Chi_Cuadrada.html); presentación (2026_11_09_V2_Modulo7_Chi_Cuadrada.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
-      <tr><th scope="row">Uso previsto</th><td>Autoevaluación formativa del módulo 7; no se califica.</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V2_Modulo7_Autoevaluacion_Chi_Cuadrada.html (versión anterior); guía del módulo (2026_11_09_V3_Modulo7_Guia_Chi_Cuadrada.html); presentación (2026_11_09_V3_Modulo7_Chi_Cuadrada.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Uso previsto</th><td>Autoevaluación formativa del módulo 7; el participante exporta su resultado en PDF y lo sube a Teams [Propuesta].</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V2_Modulo7_Autoevaluacion_Chi_Cuadrada · V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V3_Modulo7_Autoevaluacion_Chi_Cuadrada · V3 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 
@@ -922,6 +939,24 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   document.addEventListener('keydown',function(ev){ if(ev.ctrlKey||ev.metaKey||ev.altKey||/input|textarea|select/i.test(ev.target.tagName)) return;
     if(ev.key==='ArrowRight'){ $('ev-sig').click(); } else if(ev.key==='ArrowLeft'){ $('ev-ant').click(); }
     else if(/^[1-8]$/.test(ev.key)){ var b=$('ev-o').querySelectorAll('button')[+ev.key-1]; if(b){ b.click(); b.focus(); } } });
+  var nom=$('ev-nombre'), NK=P+'-nombre', MOD=7, ARCH="2026_11_09_V3_Modulo7_Autoevaluacion_Chi_Cuadrada \u00b7 V3";
+  try{ nom.value=localStorage.getItem(NK)||''; }catch(e){}
+  nom.addEventListener('input',function(){ try{localStorage.setItem(NK,nom.value);}catch(e){} });
+  function esc(t){ var d=document.createElement('div'); d.textContent=t; return d.innerHTML; }
+  function reporte(){ var n=0,b=0; Q.forEach(function(q,i){ if(r[i]!==undefined){ n++; if(r[i]===q.c) b++; } });
+    var f=new Date(), fecha=f.toLocaleDateString('es-MX',{day:'2-digit',month:'long',year:'numeric'})+' · '+f.toLocaleTimeString('es-MX',{hour:'2-digit',minute:'2-digit',hour12:false})+' h';
+    var h='<h2>Resultado de la autoevaluación · Módulo '+MOD+'</h2><dl><dt>Participante</dt><dd>'+esc(nom.value.trim()||'(sin nombre)')+'</dd><dt>Fecha y hora</dt><dd>'+esc(fecha)+'</dd>'+
+      '<dt>Puntaje</dt><dd>'+b+' correctas de '+Q.length+' preguntas ('+Math.round(100*b/Q.length)+' %) · respondidas: '+n+' de '+Q.length+'</dd><dt>Archivo</dt><dd>'+esc(ARCH)+'</dd></dl>'+
+      '<table><thead><tr><th>#</th><th>Pregunta</th><th>Tu respuesta</th><th>Resultado</th><th>Respuesta correcta</th></tr></thead><tbody>';
+    Q.forEach(function(q,i){ var a=r[i], res=a===undefined?'Sin responder':(a===q.c?'Correcta':'Incorrecta'), cl=a===undefined?'':(a===q.c?'ok':'mal');
+      h+='<tr><td>'+(i+1)+'</td><td>'+esc(q.e)+'</td><td>'+(a===undefined?'—':L[a]+'. '+esc(q.o[a]))+'</td><td class="'+cl+'">'+res+'</td><td>'+L[q.c]+'. '+esc(q.o[q.c])+'</td></tr>'; });
+    $('ev-reporte').innerHTML=h+'</tbody></table>'; return n; }
+  window.addEventListener('beforeprint',reporte);
+  $('ev-pdf').onclick=function(){ var av=$('ev-aviso');
+    if(!nom.value.trim()){ av.hidden=false; av.textContent='Escribe tu nombre completo antes de exportar.'; nom.focus(); return; }
+    var n=reporte(); av.hidden=n===Q.length; av.textContent=n<Q.length?('Te faltan '+(Q.length-n)+' preguntas: aparecerán como «Sin responder» en el PDF.'):'';
+    window.print(); };
+  document.addEventListener('restablecer',function(){ nom.value=''; $('ev-aviso').hidden=true; });
   try{ window.name='diplomado-evaluacion'; }catch(e){}
   pinta(); resultado(); avance();
 })();

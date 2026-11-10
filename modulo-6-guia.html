@@ -122,7 +122,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V5";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V6";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -691,12 +691,12 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <h1>Módulo 6 · Inferencia estadística acerca de medias con dos poblaciones</h1>
   <p class="subtitulo">Guía de estudio del módulo</p>
   <p class="subtitulo">Aplicada a la investigación en finanzas empresariales · Instructor: Eduardo Salas García</p>
-  <p class="meta">V5 · prototipo para revisión · 09/11/2026 17:00 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V6 · prototipo para revisión · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
   <section aria-labelledby="como-leer"><h2 id="como-leer">Cómo usar este módulo</h2>
-  <p class="aviso-in no-imprimir"><strong>Prototipo V5.</strong> Guía armada con el material de la sesión del 24-09-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet.</p>
+  <p class="aviso-in no-imprimir"><strong>Prototipo V6.</strong> Guía armada con el material de la sesión del 24-09-2026 del curso doctoral, ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet.</p>
   <p>Tres pasos: <strong>1)</strong> revisa lo esencial y la regla de decisión; <strong>2)</strong> estudia la presentación lección por lección y marca «Ya lo entendí»; <strong>3)</strong> practica la lectura guiada, contesta la autoevaluación y entrega tu evidencia.</p>
   <section class="objetivos" aria-labelledby="obj-m"><h3 id="obj-m">Al terminar el módulo podrás</h3><ol><li>Al terminar podrás decidir, a partir del diseño de recolección, si corresponde una prueba t para muestras independientes o para muestras relacionadas (pareadas).</li><li>Al terminar podrás acomodar los datos en SPSS en formato largo (independientes) o ancho (pareadas).</li><li>Al terminar podrás verificar los supuestos (escala, independencia, normalidad con Shapiro-Wilk o K-S, homogeneidad de varianzas con Levene) y decir qué hipótesis nula contrasta cada prueba.</li><li>Al terminar podrás leer la salida de SPSS: elegir la fila con Levene, localizar t, gl, Sig. (bilateral) e IC 95 % de la diferencia, y ajustar el valor p a una cola cuando corresponda.</li><li>Al terminar podrás redactar una conclusión que distinga significancia estadística, magnitud (d de Cohen) y relevancia práctica, sin afirmar igualdad cuando no se rechaza H0.</li><li>Al terminar podrás relacionar la salida de SPSS con las fórmulas de Anderson cap. 10 (t con varianzas no iguales y gl de Welch, t con varianza combinada y t pareada); las fórmulas con σ conocidas y de dos proporciones quedan como lectura complementaria, pues no se expusieron en la grabación.</li></ol>
     <div class="progreso" aria-label="Avance del módulo 6"><i id="barra-avance"></i></div></section>
@@ -864,6 +864,7 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   <section id="autoevaluacion" aria-labelledby="h-auto"><h2 id="h-auto">Autoevaluación</h2>
   <p>20 preguntas de opción múltiple sobre lo esencial del módulo y tres preguntas abiertas «Para pensar». Están en su propia página para que cada pregunta y sus opciones se lean completas, una a la vez, con la explicación al responder y tu resultado al final. Tu avance se guarda en este navegador.</p>
   <p class="lec-ini"><a class="boton-entrar" href="modulo-6-autoevaluacion.html" target="diplomado-evaluacion">Abrir la autoevaluación →</a></p>
+  <p>Al terminar, exporta tu resultado en PDF desde la misma página (botón «Exportar mi resultado en PDF», con tu nombre) y súbelo a Teams, en la tarea del módulo. <span class="tag prop">Propuesta</span></p>
   <p class="nota">Se abre en otra pestaña; esta guía sigue a la mano para repasar.</p>
   </section>
   <section id="cuidado" aria-labelledby="h-cuidado"><h2 id="h-cuidado">Errores que más cuestan</h2><ul><li>Levene con Sig. &gt; .05 no dice nada sobre las medias: solo indica qué fila leer. Además, no prueba que las varianzas sean iguales; solo no hay evidencia de que difieran.</li><li>Analizar datos pareados como independientes puede cambiar la conclusión: los mismos números dan Sig. = .107 como independientes (E4) y .031 como pareados (E5).</li><li>La dirección (una o dos colas) se fija antes de ver los datos. Pasar a una cola para «alcanzar» significancia, como sería en E3, es un error.</li><li>El valor p no es la probabilidad de que H1 sea cierta, y la diferencia muestral (39 h en E1) no garantiza un ahorro exacto: tiene error.</li><li>No rechazar H0 no prueba igualdad: el resultado es inconcluso. Se escribe «no hay evidencia suficiente de diferencia», nunca «se acepta H0» ni «son iguales».</li><li>En pareadas la normalidad se revisa en la variable de diferencias (sin factor), no en cada medición por separado como en independientes.</li></ul></section>
@@ -903,20 +904,20 @@ table.spss th[scope=row],table.spss caption{text-align:left}
   </ol></section>
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Archivo</th><td>2026_11_09_V5_Modulo6_Guia_Medias_Dos_Poblaciones</td></tr>
-      <tr><th scope="row">Versión</th><td>V5 (prototipo para revisión). V5: Se actualizan los enlaces a la presentación con la portada y la paleta de colores homologadas del diplomado (en el módulo 6 la portada es la nueva lámina 1, así que todas las referencias a láminas de esta guía se recorren una posición respecto de la presentación V16: la lámina N de la V16 es aquí la N + 1); contenido sin cambios. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:00 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Archivo</th><td>2026_11_09_V6_Modulo6_Guia_Medias_Dos_Poblaciones</td></tr>
+      <tr><th scope="row">Versión</th><td>V6 (prototipo para revisión). V6: La sección Autoevaluación indica exportar el resultado en PDF y subirlo a Teams; se actualizan los enlaces a la presentación sin menciones del curso doctoral y a la autoevaluación nueva. Versión anterior: portada y paleta de colores homologadas (en el módulo 6 la portada es la nueva lámina 1, así que todas las referencias a láminas de esta guía se recorren una posición respecto de la presentación V16: la lámina N de la V16 es aquí la N + 1). Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
       <tr><th scope="row">Origen del contenido</th><td>Guía de estudio V8, sesión 7 (24-09-2026): 6 objetivos, 5 ideas clave, 20 conceptos, 16 fórmulas, 6 procedimientos, 6 errores clave, 20 preguntas, 2 videos y 10 bases; auditado en las versiones V2 a V8 de esa guía. Se muestran las versiones condensadas de la vista de estudio; las referencias internas (transcripciones y archivos de trabajo) constan en la guía de origen.</td></tr>
       <tr><th scope="row">Excluido a propósito</th><td>Pendientes y dudas personales, énfasis del profesor y observaciones sobre capturas propias: son notas de estudio de Eduardo y no aplican al participante.</td></tr>
       <tr><th scope="row">Pendientes</th><td>Base de datos del caso de crédito que pide el registro (empresas que solicitan y que no solicitan crédito); corregir el enunciado del ejercicio 2 (en Anderson mide horas de TV por cable y radio); visto bueno de Identidad Institucional.</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V4_Modulo6_Guia_Medias_Dos_Poblaciones.html (versión anterior); 2026_11_09_V1_Modulo6_Guia_Medias_Dos_Poblaciones.html (V1, de donde se conservan sin cambios la lectura guiada interactiva, las preguntas «Para pensar», la evidencia y dos lecturas verificadas); guía de estudio V8, sesión 7; plantilla común de guía de módulo; presentación del módulo (2026_11_09_V6_Modulo6_Medias_Dos_Poblaciones.html); autoevaluación del módulo (2026_11_09_V2_Modulo6_Autoevaluacion_Medias_Dos_Poblaciones.html); plataforma (2026_11_09_V11_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>2026_11_09_V5_Modulo6_Guia_Medias_Dos_Poblaciones.html (versión anterior); 2026_11_09_V1_Modulo6_Guia_Medias_Dos_Poblaciones.html (V1, de donde se conservan sin cambios la lectura guiada interactiva, las preguntas «Para pensar», la evidencia y dos lecturas verificadas); guía de estudio V8, sesión 7; plantilla común de guía de módulo; presentación del módulo (2026_11_09_V7_Modulo6_Medias_Dos_Poblaciones.html); autoevaluación del módulo (2026_11_09_V3_Modulo6_Autoevaluacion_Medias_Dos_Poblaciones.html); plataforma (2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
       <tr><th scope="row">Uso previsto</th><td>Guía del módulo 6 para revisión del instructor y la coordinación.</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V5_Modulo6_Guia_Medias_Dos_Poblaciones · V5 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_09_V6_Modulo6_Guia_Medias_Dos_Poblaciones · V6 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 
