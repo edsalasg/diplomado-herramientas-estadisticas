@@ -2,6 +2,7 @@
 <html lang="es" data-theme="auto">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="esalas@eduardosalas.com">
 <title>Diplomado Herramientas Estadísticas · UNISON</title>
@@ -124,7 +125,7 @@ ol.lista-pasos>li::before{content:counter(p);position:absolute;left:10px;top:8px
 .ppdac li strong{display:block;color:var(--titulo);font-family:var(--fuente-titulo)}
 footer{margin-top:40px;padding:14px 16px 28px;border-top:var(--borde) solid var(--linea);font-size:.85em;color:var(--texto-2)}
 @page{size:letter;margin:2cm 2cm 2.2cm;
-  @bottom-left{content:"esalas@eduardosalas.com · V12";font:9pt Arial;color:#566573}
+  @bottom-left{content:"esalas@eduardosalas.com · V13";font:9pt Arial;color:#566573}
   @bottom-right{content:"Página " counter(page) " de " counter(pages);font:9pt Arial;color:#566573}}
 @media print{
   :root{--escala:1}
@@ -228,7 +229,6 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
 </style>
 <style id="modulos-d">.modulo-d ul{margin:.3em 0 .6em;padding-left:1.1em}.modulo-d p{text-align:left!important}</style>
 <style id="menu-modulos">nav.menu .sub{padding-left:28px;font-size:.92em}nav.menu span.sub.inactivo{display:block;padding:6px 12px 6px 28px;color:var(--gris,#566573);opacity:.75;cursor:default}nav.menu span.sub.inactivo::after{content:" · en preparación";font-size:.85em}</style>
-<meta name="robots" content="noindex, nofollow">
 </head>
 <body>
 <div class="barra no-imprimir" id="barra" role="toolbar" aria-label="Controles de la página">
@@ -269,7 +269,7 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
     <a href="#programa">Programa</a>
     <a href="#calendario">Calendario</a>
     <a href="#modulos">Módulos</a>
-    <span class="sub inactivo" title="En preparación">Módulo 1 · Preparación de datos</span>
+    <a href="modulo-1-guia.html" class="sub">Módulo 1 · Preparación de datos</a>
     <a href="modulo-2-guia.html" class="sub">Módulo 2 · Tablas y gráficas</a>
     <a href="modulo-3-guia.html" class="sub">Módulo 3 · Medidas numéricas</a>
     <a href="modulo-4-guia.html" class="sub">Módulo 4 · Muestreo</a>
@@ -291,13 +291,13 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
 <header id="inicio">
   <h1>Diplomado Herramientas Estadísticas Básicas para la Investigación en las Ciencias Económicas y Administrativas</h1>
   <p class="subtitulo">Plataforma del participante: todo el diplomado en un solo lugar, paso a paso, del registro a la constancia.</p>
-  <p class="meta">V12 · prototipo para revisión del equipo · 09/11/2026 17:15 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
+  <p class="meta">V13 · prototipo para revisión del equipo · 10/11/2026 08:50 h (Hermosillo, Sonora) · esalas@eduardosalas.com</p>
 </header>
 
 <main>
 
   <section aria-labelledby="como-leer"><h2 id="como-leer">Cómo leer esta plataforma</h2>
-    <p class="aviso-in no-imprimir"><strong>Prototipo V12.</strong> Contenido tomado del registro oficial del diplomado (folio AA314016228) y de los materiales del curso de doctorado. Lo marcado <span class="tag prop">Propuesta</span> está por aprobar con la coordinación; lo marcado <span class="tag pend">Por confirmar</span> no tiene aún fuente oficial. Antes de publicarse, la identidad gráfica debe recibir el visto bueno de la Coordinación de Identidad Institucional.</p>
+    <p class="aviso-in no-imprimir"><strong>Prototipo V13.</strong> Contenido tomado del registro oficial del diplomado (folio AA314016228) y de los materiales de la edición previa. Lo marcado <span class="tag prop">Propuesta</span> está por aprobar con la coordinación; lo marcado <span class="tag pend">Por confirmar</span> no tiene aún fuente oficial. Antes de publicarse, la identidad gráfica debe recibir el visto bueno de la Coordinación de Identidad Institucional.</p>
     <p>Recorre las secciones en el orden del menú. Las casillas que marques (tu avance) y tus notas se guardan solo en este navegador. Las etiquetas indican la naturaleza de cada dato: <span class="tag v">Verificable</span> se comprueba en la fuente citada, <span class="tag i">Inferencia</span> se deduce de datos verificables, <span class="tag int">Interpretación</span> es criterio del autor y <span class="tag prop">Propuesta</span> es un diseño por aprobar.</p></section>
 
   <section aria-labelledby="datos-clave"><h2 id="datos-clave">El diplomado en una mirada</h2>
@@ -340,8 +340,9 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
   <section id="programa" aria-labelledby="h-programa"><h2 id="h-programa">Programa: la ruta de siete módulos</h2>
     <p>Todos los módulos siguen la misma estructura para que no tengas que volver a aprender cómo moverte: <strong>problema → plan → datos → análisis → conclusión</strong> (ciclo PPDAC; Spiegelhalter, 2019, PDF p. 26). El módulo 6 está completo como ejemplo de cómo se verán los demás.</p>
     <div class="rejilla">
-      <article class="modulo"><p class="num">Módulo 1 · 20 h</p><h3>Preparación y procesamiento de datos aplicados a la investigación en las ciencias económicas y administrativas</h3><p class="inst">Sergio Ramón Rossetti López</p><span><span class="estado prep">En preparación</span></span>
-        <details><summary>Temario</summary><ol><li>Conceptos fundamentales: elementos, variables, observaciones y datos; población y muestra.</li><li>Tipos de variables y niveles de medición (nominal, ordinal, de intervalo y de razón).</li><li>Libro de códigos y captura de datos: vista de datos y vista de variables en SPSS.</li><li>Importación y exportación de datos entre Excel y SPSS.</li><li>Limpieza y depuración: valores perdidos, datos atípicos y errores de captura.</li></ol></details></article>
+      <article class="modulo"><p class="num">Módulo 1 · 20 h</p><h3>Preparación y procesamiento de datos aplicados a la investigación en las ciencias económicas y administrativas</h3><p class="inst">Sergio Ramón Rossetti López</p><span><span class="estado listo">Borrador para revisión</span></span>
+        <details><summary>Temario</summary><ol><li>Conceptos fundamentales: elementos, variables, observaciones y datos; población y muestra.</li><li>Tipos de variables y niveles de medición (nominal, ordinal, de intervalo y de razón).</li><li>Libro de códigos y captura de datos: vista de datos y vista de variables en SPSS.</li><li>Importación y exportación de datos entre Excel y SPSS.</li><li>Limpieza y depuración: valores perdidos, datos atípicos y errores de captura.</li></ol><p class="nota">Aún sin presentación: las lecciones de la guía llevan a los procedimientos de la sesión. La exportación de datos (tema 4) y los datos atípicos y errores de captura (tema 5) no tienen material todavía <span class="tag pend">Por confirmar</span></p></details>
+        <p><a href="modulo-1-guia.html">Entrar al módulo 1 →</a></p></article>
       <article class="modulo"><p class="num">Módulo 2 · 20 h</p><h3>Estadística descriptiva con métodos tabulares y gráficos aplicada a la investigación económica</h3><p class="inst">Jorge Alberto Muñan Valencia</p><span><span class="estado listo">Prototipo para revisión</span></span>
         <details><summary>Temario y material previo</summary><ol><li>Distribuciones de frecuencia absolutas, relativas, porcentuales y acumuladas.</li><li>Tablas de frecuencia para variables cualitativas y cuantitativas (agrupación en clases).</li><li>Gráficos para datos categóricos: barras y sectores.</li><li>Gráficos para datos cuantitativos: histograma, polígono de frecuencias, ojiva y tallo y hoja.</li><li>Diagramas de dispersión como primera exploración de relaciones.</li></ol><p class="nota">Material de la edición previa: <a href="https://jorgemunan20.github.io/estadistica-descriptiva/">presentación</a>.</p></details>
         <p><a href="modulo-2-guia.html">Entrar al módulo 2 →</a></p></article>
@@ -387,7 +388,9 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
   <section id="modulos" aria-labelledby="h-modulos"><h2 id="h-modulos">Módulos disponibles</h2>
     <p>Todos los módulos tienen la misma estructura: una <strong>guía de estudio</strong> (lecciones, videos de repaso, conceptos y fórmulas, lectura guiada de SPSS y evidencia), la <strong>presentación del instructor</strong> en su formato original, con el mismo marco de navegación, y la <strong>autoevaluación</strong> en su propia página, una pregunta a la vez. <span class="tag prop">Prototipo para revisión</span></p>
     <div class="hallazgos">
-      <div class="tarjeta modulo-d"><span class="cifra">Módulo 2</span><p><strong>Estadística descriptiva con métodos tabulares y gráficos</strong><br>Jorge Alberto Muñan Valencia</p>
+      <div class="tarjeta modulo-d"><span class="cifra">Módulo 1</span><p><strong>Preparación y procesamiento de datos</strong><br>Sergio Ramón Rossetti López</p>
+        <ul><li>8 lecciones</li><li>Sin presentación todavía</li><li>2 videos de repaso</li><li><a href="modulo-1-autoevaluacion.html" target="diplomado-evaluacion">14 preguntas de autoevaluación</a></li></ul>
+        <p><a class="boton-entrar" href="modulo-1-guia.html">Entrar al módulo 1 →</a></p></div><div class="tarjeta modulo-d"><span class="cifra">Módulo 2</span><p><strong>Estadística descriptiva con métodos tabulares y gráficos</strong><br>Jorge Alberto Muñan Valencia</p>
         <ul><li>8 lecciones</li><li>42 láminas</li><li>2 videos de repaso</li><li><a href="modulo-2-autoevaluacion.html" target="diplomado-evaluacion">19 preguntas de autoevaluación</a></li></ul>
         <p><a class="boton-entrar" href="modulo-2-guia.html">Entrar al módulo 2 →</a></p></div><div class="tarjeta modulo-d"><span class="cifra">Módulo 3</span><p><strong>Estadística descriptiva con medidas numéricas</strong><br>Pavel Raúl Dennis Quiñonez</p>
         <ul><li>8 lecciones</li><li>59 láminas</li><li>2 videos de repaso</li><li><a href="modulo-3-autoevaluacion.html" target="diplomado-evaluacion">19 preguntas de autoevaluación</a></li></ul>
@@ -401,12 +404,13 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
         <ul><li>7 lecciones</li><li>75 láminas</li><li>2 videos de repaso</li><li><a href="modulo-7-autoevaluacion.html" target="diplomado-evaluacion">14 preguntas de autoevaluación</a></li></ul>
         <p><a class="boton-entrar" href="modulo-7-guia.html">Entrar al módulo 7 →</a></p></div>
     </div>
-    <p class="nota detalle">Conteos de cada presentación y de la guía de estudio V8 (02-10-2026) <span class="tag v">Verificable</span>. El módulo 1 sigue en preparación: aún no tiene presentación. Los módulos 3 y 7 son borradores: a sus presentaciones homologadas se agregaron láminas (interactivos, gráficas y ejercicios guiados), marcadas «Agregada al diplomado», para igualarlas a los demás módulos; requieren el visto bueno de sus instructores <span class="tag pend">Por confirmar</span>. Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages y requieren internet.</p>
+    <p class="nota detalle">Conteos de cada presentación y de la guía de estudio V8 (02-10-2026) <span class="tag v">Verificable</span>. El módulo 1 es borrador y aún no tiene presentación: su guía y su autoevaluación salen del material de la sesión del 20-08-2026 y requieren el visto bueno del instructor. Los módulos 3 y 7 son borradores: a sus presentaciones homologadas se agregaron láminas (interactivos, gráficas y ejercicios guiados), marcadas «Agregada al diplomado», para igualarlas a los demás módulos; requieren el visto bueno de sus instructores <span class="tag pend">Por confirmar</span>. Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages y requieren internet.</p>
   </section>
 
   <section id="evaluacion" aria-labelledby="h-eval"><h2 id="h-eval">Evaluación</h2>
     <ul>
       <li><strong>Evidencia por módulo:</strong> una actividad práctica de cada uno de los siete módulos, entregada en Microsoft Teams.</li>
+      <li><strong>Plantilla de evidencia:</strong> <a href="plantilla-evidencia.docx" download>descarga la plantilla en Word</a>, con la portada del diplomado y las secciones comunes (actividad, datos, procedimiento en SPSS, resultados, interpretación y referencias); se guarda en PDF para subirla a Teams. <span class="tag prop">Propuesta</span></li>
       <li><strong>Examen final integrador:</strong> preparación de datos, análisis descriptivo e inferencia.</li>
       <li><strong>Acreditación:</strong> mínimo 80/100 en cada módulo y en el examen final.</li>
     </ul>
@@ -500,22 +504,22 @@ main p,main li{-webkit-hyphens:manual!important;hyphens:manual!important}
     <li>Heath, C., y Starr, K. (2022). <em>Making numbers count</em>. Avid Reader Press. PDF p. 12.</li>
     <li>Benavides Lara, M. A., et al. (2023). <em>Aplicaciones de la inteligencia artificial generativa para la docencia</em>. UNAM, CUAIEED. PDF p. 59.</li>
     <li>Karadağ, H. (2017). <em>Journal of Entrepreneurship in Emerging Economies, 9</em>(3), 300–314.</li>
-    <li>Materiales propios del curso de doctorado (2026): Manual de lectura de resultados en SPSS V2; Recetario SPSS V1; Ficha de handoff V2; presentaciones de la edición previa.</li>
+    <li>Materiales propios de la edición previa (2026): Manual de lectura de resultados en SPSS V2; Recetario SPSS V1; Ficha de handoff V2; presentaciones de la edición previa.</li>
   </ol></section>
 
   <section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2>
     <details><summary>Ver la tabla de trazabilidad</summary>
     <div class="tabla-scroll"><table><tbody>
-      <tr><th scope="row">Versión</th><td>V12 (prototipo para revisión del equipo). V12: cada autoevaluación permite exportar el resultado en PDF (nombre, fecha y hora, puntaje y respuestas) para subirlo a Teams [Propuesta]; las presentaciones ya no mencionan el curso doctoral fuera de la trazabilidad (solo el expositor del registro); se actualizan los enlaces. V11: las presentaciones de los seis módulos comparten la misma portada del diplomado y la misma paleta de colores (identidad UNISON: azul #24398A y oro #E1B73D, con la paleta de colores de los materiales para gráficas y estados); se actualizan los enlaces a las guías y autoevaluaciones nuevas; el módulo 6 pasa a 60 láminas por su portada. V10: se agregan los módulos 3 y 7 como borradores, con guía, presentación homologada completada y autoevaluación (menú izquierdo, programa y «Módulos disponibles»); la autoevaluación de cada módulo pasa a su propia página, enlazada desde su guía y desde la ficha del módulo; se actualizan los enlaces a las guías nuevas. V9: el menú izquierdo muestra los siete módulos (con enlace los que ya tienen guía; los demás, en preparación); en cada módulo, la presentación se abre en otra pestaña para no perder la guía. V8: menús consistentes en los tres niveles (plataforma, guías y presentaciones): la sección «Módulos disponibles» presenta los módulos 2, 4, 5 y 6 con la misma ficha; todas las guías salen de la misma plantilla (mismas secciones y mismo menú) y todas las presentaciones llevan el mismo marco de navegación. V7: se agrega el módulo 5 como piloto armado con el material de la guía de estudio V8 (guía 2026_11_09_V1_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html y presentación del instructor 2026_11_09_V1_Modulo5_Intervalos_Pruebas_Hipotesis.html); su ficha y el menú enlazan a la guía. V6: diseño fluido; los párrafos ocupan todo el ancho de su bloque y se adaptan al tamaño de la pantalla, y ya no se parten palabras con guion. Se retira el límite de 45 a 75 caracteres por línea que se había adoptado en V4, a petición del autor. El módulo 6 se divide en dos páginas: la guía de estudio (2026_11_09_V1_Modulo6_Guia_Medias_Dos_Poblaciones.html), que es la entrada al módulo, y la presentación con su formato original de clase (2026_11_09_V2_Modulo6_Medias_Dos_Poblaciones.html). V5: el módulo 6 pasa a su propia página (2026_11_09_V1_Modulo6_Medias_Dos_Poblaciones.html) con la presentación de clase completa; aquí queda su ficha resumen con enlace. V4 (versión intermedia, no entregada): optimización de espacio con base en Robbins (2025, Learning web design, 6.ª ed., p. 518: líneas de 45 a 75 caracteres); contenido que se adapta a la pantalla; menú de 250 px; márgenes compactos; «Empieza aquí» y Ayuda en dos columnas; en celular, escudo y menú en un renglón. V3: secciones numeradas, barra «Estás en» y «Siguiente sección». V2: menú lateral izquierdo.</td></tr>
-      <tr><th scope="row">Fecha y hora de emisión</th><td>09/11/2026 17:15 h (Hermosillo, Sonora, UTC−7)</td></tr>
+      <tr><th scope="row">Versión</th><td>V13 (prototipo para revisión del equipo). V13: se agrega el módulo 1 como borrador (guía y autoevaluación, sin presentación; menú izquierdo, programa y «Módulos disponibles»); la sección Evaluación enlaza la plantilla de evidencia en Word con la portada del diplomado [Propuesta]; el aviso inicial y las fuentes se refieren a la «edición previa» del material; se actualizan los enlaces a las guías, presentaciones y autoevaluaciones nuevas. V12: cada autoevaluación permite exportar el resultado en PDF (nombre, fecha y hora, puntaje y respuestas) para subirlo a Teams [Propuesta]; las presentaciones ya no mencionan la edición previa fuera de la trazabilidad (solo el expositor del registro); se actualizan los enlaces. V11: las presentaciones de los seis módulos comparten la misma portada del diplomado y la misma paleta de colores (identidad UNISON: azul #24398A y oro #E1B73D, con la paleta de colores de los materiales para gráficas y estados); se actualizan los enlaces a las guías y autoevaluaciones nuevas; el módulo 6 pasa a 60 láminas por su portada. V10: se agregan los módulos 3 y 7 como borradores, con guía, presentación homologada completada y autoevaluación (menú izquierdo, programa y «Módulos disponibles»); la autoevaluación de cada módulo pasa a su propia página, enlazada desde su guía y desde la ficha del módulo; se actualizan los enlaces a las guías nuevas. V9: el menú izquierdo muestra los siete módulos (con enlace los que ya tienen guía; los demás, en preparación); en cada módulo, la presentación se abre en otra pestaña para no perder la guía. V8: menús consistentes en los tres niveles (plataforma, guías y presentaciones): la sección «Módulos disponibles» presenta los módulos 2, 4, 5 y 6 con la misma ficha; todas las guías salen de la misma plantilla (mismas secciones y mismo menú) y todas las presentaciones llevan el mismo marco de navegación. V7: se agrega el módulo 5 como piloto armado con el material de la guía de estudio V8 (guía 2026_11_09_V1_Modulo5_Guia_Intervalos_Pruebas_Hipotesis.html y presentación del instructor 2026_11_09_V1_Modulo5_Intervalos_Pruebas_Hipotesis.html); su ficha y el menú enlazan a la guía. V6: diseño fluido; los párrafos ocupan todo el ancho de su bloque y se adaptan al tamaño de la pantalla, y ya no se parten palabras con guion. Se retira el límite de 45 a 75 caracteres por línea que se había adoptado en V4, a petición del autor. El módulo 6 se divide en dos páginas: la guía de estudio (2026_11_09_V1_Modulo6_Guia_Medias_Dos_Poblaciones.html), que es la entrada al módulo, y la presentación con su formato original de clase (2026_11_09_V2_Modulo6_Medias_Dos_Poblaciones.html). V5: el módulo 6 pasa a su propia página (2026_11_09_V1_Modulo6_Medias_Dos_Poblaciones.html) con la presentación de clase completa; aquí queda su ficha resumen con enlace. V4 (versión intermedia, no entregada): optimización de espacio con base en Robbins (2025, Learning web design, 6.ª ed., p. 518: líneas de 45 a 75 caracteres); contenido que se adapta a la pantalla; menú de 250 px; márgenes compactos; «Empieza aquí» y Ayuda en dos columnas; en celular, escudo y menú en un renglón. V3: secciones numeradas, barra «Estás en» y «Siguiente sección». V2: menú lateral izquierdo.</td></tr>
+      <tr><th scope="row">Fecha y hora de emisión</th><td>10/11/2026 08:50 h (Hermosillo, Sonora, UTC−7)</td></tr>
       <tr><th scope="row">Autor</th><td>esalas@eduardosalas.com</td></tr>
       <tr><th scope="row">Proyecto</th><td>260814 - Procesamiento y análisis de datos · carpeta 261109 - Diplomado</td></tr>
       <tr><th scope="row">Conversación</th><td>https://claude.ai/code/session_01LAoBMNjYbZwBVAYmq6Wot6</td></tr>
-      <tr><th scope="row">Antecedentes</th><td>V11 (17:00 h), V10 (16:40 h), V9 (16:03 h), V8 (15:51 h), V7 (15:29 h), V6 (15:04 h), V5 (14:33 h), V3 (14:03 h), V2 (14:00 h) y V1 (13:56 h) de esta plataforma; V5 publicada en GitHub Pages a las 14:54 h; Registro AA314016228; 2026_11_09_V3_Barrido_Biblioteca_Diplomado_Herramientas_Estadisticas.xlsx; comparativo de plataformas (09/11/2026); 2026_09_24_V2_Manual_Lectura_SPSS_Resultados.html; 2026_10_06_V1_Recetario_SPSS_Pruebas_Curso.docx; 2026_10_02_V8 Guía de estudio</td></tr>
-      <tr><th scope="row">Uso previsto</th><td>Prototipo de la plataforma del diplomado para revisión de la coordinación; los módulos 2 a 7 comparten la misma estructura de guía, presentación y autoevaluación, que sirve de modelo para el módulo 1. Publicada como prototipo en GitHub Pages (enlace no indexado en buscadores) para mostrar el avance a la coordinación; la versión definitiva requiere el visto bueno de Identidad Institucional.</td></tr>
+      <tr><th scope="row">Antecedentes</th><td>V12 (09/11/2026 17:15 h), V11 (17:00 h), V10 (16:40 h), V9 (16:03 h), V8 (15:51 h), V7 (15:29 h), V6 (15:04 h), V5 (14:33 h), V3 (14:03 h), V2 (14:00 h) y V1 (13:56 h) de esta plataforma; V5 publicada en GitHub Pages a las 14:54 h; Registro AA314016228; 2026_11_09_V3_Barrido_Biblioteca_Diplomado_Herramientas_Estadisticas.xlsx; comparativo de plataformas (09/11/2026); 2026_09_24_V2_Manual_Lectura_SPSS_Resultados.html; 2026_10_06_V1_Recetario_SPSS_Pruebas_Curso.docx; 2026_10_02_V8 Guía de estudio</td></tr>
+      <tr><th scope="row">Uso previsto</th><td>Prototipo de la plataforma del diplomado para revisión de la coordinación; los siete módulos comparten la misma estructura de guía y autoevaluación; los módulos 2 a 7 tienen además presentación. Publicada como prototipo en GitHub Pages (enlace no indexado en buscadores) para mostrar el avance a la coordinación; la versión definitiva requiere el visto bueno de Identidad Institucional.</td></tr>
     </tbody></table></div></details></section>
 </main>
-<footer>2026_11_09_V12_Plataforma_Diplomado_Herramientas_Estadisticas · V12 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_10_V13_Plataforma_Diplomado_Herramientas_Estadisticas · V13 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 
