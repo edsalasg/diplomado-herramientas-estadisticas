@@ -753,6 +753,20 @@ ol.lecs > li.lec .lec-t{font-size:1.3rem;font-weight:700;margin:.2em 0 .6em}
 ol.lecs > li.lec[hidden]{display:none !important}
 .entendido{display:inline-flex;align-items:center;gap:10px;font-size:1rem;margin-top:10px;cursor:pointer}
 .entendido input{width:24px;height:24px}
+
+/* Presentación dentro de la lección */
+ol.lecs > li.lec{max-width:1060px}
+.ux2-visor{margin:14px 0 6px}
+.ux2-visor .marco{position:relative;width:100%;aspect-ratio:16/10;max-height:78vh;border:1px solid var(--linea,#D5D8DC);border-radius:12px;overflow:hidden;background:#fff}
+.ux2-visor iframe{width:100%;height:100%;border:0;display:block}
+.ux2-visor .ctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.ux2-visor .ctl .pos{font-weight:700}
+.ux2-visor .ctl .ux2-btn{padding:8px 14px;min-height:44px;font-size:.9rem}
+.ux2-visor .ctl .der{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.ux2-visor .aviso-fin{margin:8px 0 0;padding:8px 12px;border-radius:8px;background:#D5F5E3;color:#1B2631}
+.ux2-visor .aviso-fin[hidden]{display:none}
+.ux2-contenido-lec{margin:14px 0 6px;padding:14px 16px;border-left:4px solid var(--unison-oro,#E1B73D);background:var(--superficie,#F4F3F0);border-radius:8px}
+.ux2-contenido-lec details{margin:0}
 /* Pie y trazabilidad */
 .ux2-traz{margin:40px 0 10px;border-top:1px solid var(--linea,#D5D8DC);padding-top:10px}
 .ux2-traz > summary{cursor:pointer;color:var(--texto-2,#566573);font-size:.95rem}

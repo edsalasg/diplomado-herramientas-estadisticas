@@ -716,6 +716,20 @@ ol.lecs > li.lec .lec-t{font-size:1.3rem;font-weight:700;margin:.2em 0 .6em}
 ol.lecs > li.lec[hidden]{display:none !important}
 .entendido{display:inline-flex;align-items:center;gap:10px;font-size:1rem;margin-top:10px;cursor:pointer}
 .entendido input{width:24px;height:24px}
+
+/* Presentación dentro de la lección */
+ol.lecs > li.lec{max-width:1060px}
+.ux2-visor{margin:14px 0 6px}
+.ux2-visor .marco{position:relative;width:100%;aspect-ratio:16/10;max-height:78vh;border:1px solid var(--linea,#D5D8DC);border-radius:12px;overflow:hidden;background:#fff}
+.ux2-visor iframe{width:100%;height:100%;border:0;display:block}
+.ux2-visor .ctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.ux2-visor .ctl .pos{font-weight:700}
+.ux2-visor .ctl .ux2-btn{padding:8px 14px;min-height:44px;font-size:.9rem}
+.ux2-visor .ctl .der{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
+.ux2-visor .aviso-fin{margin:8px 0 0;padding:8px 12px;border-radius:8px;background:#D5F5E3;color:#1B2631}
+.ux2-visor .aviso-fin[hidden]{display:none}
+.ux2-contenido-lec{margin:14px 0 6px;padding:14px 16px;border-left:4px solid var(--unison-oro,#E1B73D);background:var(--superficie,#F4F3F0);border-radius:8px}
+.ux2-contenido-lec details{margin:0}
 /* Pie y trazabilidad */
 .ux2-traz{margin:40px 0 10px;border-top:1px solid var(--linea,#D5D8DC);padding-top:10px}
 .ux2-traz > summary{cursor:pointer;color:var(--texto-2,#566573);font-size:.95rem}
@@ -815,7 +829,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 
 
 
-<div class="ux2-panel" id="p-aprende" role="tabpanel"><p class="ux2-intro">Paso 1 de 4. Lee lo esencial y avanza por las lecciones; los videos de repaso están al final.</p><section aria-labelledby="como-leer"><h2 id="como-leer">Lo que vas a lograr</h2>
+<div class="ux2-panel" id="p-aprende" role="tabpanel"><p class="ux2-intro">Paso 1 de 4. Aquí se aprende: lo esencial del módulo, las lecciones con la presentación del instructor y, al final, los videos de repaso.</p><section aria-labelledby="como-leer"><h2 id="como-leer">Lo que vas a lograr</h2>
 
 
 <details class="plegable"><summary>Ver los objetivos del módulo</summary><ol><li>Distinguir población, muestra, parámetro, estadístico, marco de muestreo y población finita frente a infinita.</li><li>Explicar qué es una distribución muestral y por qué x̄ y p̄ son variables aleatorias.</li><li>Calcular el error estándar de x̄ y de p̄ y decidir cuándo aplicar el factor de corrección para población finita (regla n/N ≤ 0.05).</li><li>Enunciar el teorema del límite central e interpretar su efecto (normalidad de la media muestral, no de los datos).</li><li>Calcular el tamaño de muestra para estimar una proporción (n0 = z²pq/E²) y ajustarlo por población finita, reproduciendo los valores de la calculadora mostrada en clase (N = 950 000 → 385; N = 600 → 235).</li><li>Elegir entre muestreo aleatorio simple, estratificado, por conglomerados, sistemático, de conveniencia y subjetivo según la investigación.</li><li>Obtener en SPSS una muestra aleatoria (Datos &gt; Seleccionar casos) y submuestras por estrato con una condición.</li></ol></details>
@@ -825,7 +839,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 </section><section aria-labelledby="h-lecciones" id="lecciones"><h2 id="h-lecciones">Lecciones</h2>
 
 
-<p>Avanza una lección a la vez. Cada una abre su tramo de la presentación en otra pestaña; al terminar, regresa aquí y marca «Ya lo entendí».</p><ol aria-label="Ir a una lección" class="ux2-puntos" id="ux2-puntos"></ol><ol class="lecs">
+<p>Cada lección muestra aquí mismo su tramo de la presentación del instructor, como en clase: avanza con las flechas de la presentación (o del teclado) y usa «Pantalla completa» para verla en grande. Al terminar la lección, marca «Ya lo entendí» y pasa a la siguiente.</p><ol aria-label="Ir a una lección" class="ux2-puntos" id="ux2-puntos"></ol><ol class="lecs">
 <li class="lec"><p class="lec-n">Lección 1 · láminas 1 a 8</p><p class="lec-t">Apertura y muestreo aleatorio simple</p>
 <p class="lec-acc"><a class="boton-entrar" href="../modulo-4.html#l1" target="diplomado-presentacion">Abrir en la presentación →</a></p>
 <label class="entendido"><input class="hecho" data-paso="1" type="checkbox"/> Ya lo entendí</label></li>
@@ -1162,11 +1176,42 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
   var lis=[].slice.call(document.querySelectorAll('ol.lecs > li.lec')); if(!lis.length) return;
   var nav=document.getElementById('ux2-lec-nav'), puntos=document.getElementById('ux2-puntos'), cuenta=document.getElementById('ux2-cuenta');
   var cajas=lis.map(function(li){ return li.querySelector('input.hecho'); });
+
+  /* Cada lección muestra su tramo de la presentación (o su contenido) dentro de la misma página */
+  function rango(li){ var m=/l[aá]minas?\s+(\d+)\s+a\s+(\d+)/i.exec(li.querySelector('.lec-n').textContent||''); return m?[+m[1],+m[2]]:null; }
+  function montar(li){
+    if(li.dataset.montada) return; li.dataset.montada='1';
+    var a=li.querySelector('.lec-acc a'); if(!a) return;
+    var href=a.getAttribute('href')||'', r=rango(li);
+    if(href.charAt(0)==='#'){
+      var dst=document.getElementById(href.slice(1)), caja=document.createElement('div'); caja.className='ux2-contenido-lec';
+      var nodo=null;
+      if(dst && dst.tagName==='DETAILS'){ nodo=dst.cloneNode(true); nodo.open=true; }
+      else if(dst && dst.id==='consulta'){ var h=dst.querySelector('h3'); if(h){ nodo=document.createElement('div'); nodo.appendChild(h.cloneNode(true)); var x=h.nextElementSibling; while(x && x.tagName!=='H3'){ nodo.appendChild(x.cloneNode(true)); x=x.nextElementSibling; } } }
+      if(nodo){ nodo.querySelectorAll('[id]').forEach(function(e){ e.removeAttribute('id'); }); if(nodo.id) nodo.removeAttribute('id'); caja.appendChild(nodo); a.closest('.lec-acc').before(caja); a.closest('.lec-acc').hidden=true; }
+      return;
+    }
+    if(!r) return;
+    var base=href.split('#')[0];
+    var v=document.createElement('div'); v.className='ux2-visor';
+    v.innerHTML='<div class="marco"><iframe title="Presentación: '+(li.querySelector('.lec-t').textContent||'')+'" loading="lazy" allow="fullscreen"></iframe></div>'+
+      '<div class="ctl"><span class="pos">Lámina '+r[0]+' · esta lección va de la '+r[0]+' a la '+r[1]+'</span>'+
+      '<span class="der"><button type="button" class="ux2-btn sec v-full">⛶ Pantalla completa</button><a class="ux2-btn sec" target="diplomado-presentacion" href="'+href+'">Abrir en otra pestaña</a></span></div>'+
+      '<p class="aviso-fin" hidden>Llegaste a la última lámina de esta lección. Si quedó clara, marca «Ya lo entendí» y pasa a la siguiente.</p>';
+    a.closest('.lec-acc').before(v); a.closest('.lec-acc').hidden=true;
+    var ifr=v.querySelector('iframe'), pos=v.querySelector('.pos'), fin=v.querySelector('.aviso-fin');
+    ifr.src=base+'#l'+r[0];
+    function D(){ try{ return ifr.contentWindow.__deck||null; }catch(e){ return null; } }
+    function pinta(){ var d=D(); if(!d) return; var k=d.actual()+1; pos.textContent='Lámina '+k+' · esta lección va de la '+r[0]+' a la '+r[1]; fin.hidden=!(k>=r[1]); }
+    v.querySelector('.v-full').addEventListener('click',function(){ var m=v.querySelector('.marco'); try{ (m.requestFullscreen||m.webkitRequestFullscreen).call(m); }catch(e){} });
+    ifr.addEventListener('load',function(){ var ok=false; try{ var w=ifr.contentWindow; ok=!!w.__deck; try{ var st=w.document.createElement('style'); st.textContent='#marco-cab a.mc-b{display:none !important} #marco-cab a.mc-marca{pointer-events:none}'; w.document.head.appendChild(st); }catch(e2){} w.addEventListener('hashchange',pinta); w.document.addEventListener('keyup',pinta); w.document.addEventListener('click',function(){ setTimeout(pinta,60); }); }catch(e){}
+      if(!ok){ pos.textContent='Esta lección va de la lámina '+r[0]+' a la '+r[1]+'; avanza con los botones de la presentación.'; } else pinta(); });
+  }
   var i=0;
   lis.forEach(function(li,j){ var b=document.createElement('button'); b.type='button'; b.textContent=j+1; b.setAttribute('aria-label','Lección '+(j+1)); b.addEventListener('click',function(){ ver(j); }); puntos.appendChild(b); });
   function marcar(){ [].slice.call(puntos.children).forEach(function(b,j){ b.classList.toggle('hecha',!!(cajas[j]&&cajas[j].checked)); b.setAttribute('aria-current',j===i?'true':'false'); });
     var n=cajas.filter(function(c){return c&&c.checked;}).length; var t=document.getElementById('ux2-avance-txt'); if(t) t.textContent=n+' de '+lis.length+' lecciones'; }
-  function ver(j){ i=Math.max(0,Math.min(lis.length-1,j)); lis.forEach(function(li,k){ li.hidden=(k!==i); }); cuenta.textContent='Lección '+(i+1)+' de '+lis.length;
+  function ver(j){ i=Math.max(0,Math.min(lis.length-1,j)); lis.forEach(function(li,k){ li.hidden=(k!==i); }); montar(lis[i]); cuenta.textContent='Lección '+(i+1)+' de '+lis.length;
     document.getElementById('ux2-ant').disabled=(i===0); document.getElementById('ux2-sig').textContent=(i===lis.length-1)?'Ir a Practica →':'Siguiente lección →'; marcar(); }
   document.getElementById('ux2-ant').addEventListener('click',function(){ ver(i-1); });
   document.getElementById('ux2-sig').addEventListener('click',function(){ if(i===lis.length-1){ abrir('practica',true); history.replaceState(null,'','#practica'); } else ver(i+1); });
