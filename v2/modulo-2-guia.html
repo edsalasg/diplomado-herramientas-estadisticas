@@ -720,8 +720,23 @@ ol.lecs > li.lec[hidden]{display:none !important}
 /* Presentación dentro de la lección */
 ol.lecs > li.lec{max-width:1060px}
 .ux2-visor{margin:14px 0 6px}
-.ux2-visor .marco{position:relative;width:100%;aspect-ratio:16/10;max-height:78vh;border:1px solid var(--linea,#D5D8DC);border-radius:12px;overflow:hidden;background:#fff}
+.ux2-visor .marco{position:relative;width:100%;aspect-ratio:16/10;max-height:82vh;min-height:360px;border:1px solid var(--linea,#D5D8DC);border-radius:12px;overflow:hidden;background:#fff}
 .ux2-visor iframe{width:100%;height:100%;border:0;display:block}
+.ux2-visor .arriba{display:flex;justify-content:flex-end;margin-bottom:8px}
+.ux2-visor .arriba .ux2-btn{min-height:48px;padding:10px 18px;font-size:1rem}
+.ux2-visor .salir{display:none;position:absolute;top:112px;right:14px;z-index:3;min-height:44px;padding:8px 14px;border:0;border-radius:10px;background:#24398A;color:#fff;font-weight:700;font-size:.95rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+.ux2-visor .marco:fullscreen{aspect-ratio:auto;max-height:none;min-height:0;width:100vw;height:100vh;border:0;border-radius:0}
+.ux2-visor .marco:-webkit-full-screen{width:100vw;height:100vh;max-height:none;border:0;border-radius:0}
+.ux2-visor .marco:fullscreen .salir,.ux2-visor .marco.completa .salir{display:block}
+.ux2-visor .marco.completa{position:fixed;inset:0;z-index:2147483000;width:100vw;height:100vh;max-height:none;min-height:0;aspect-ratio:auto;border:0;border-radius:0}
+html.ux2-sin-scroll,html.ux2-sin-scroll body{overflow:hidden}
+.ux2-guiados{display:grid;gap:12px;margin:14px 0}
+.ux2-guiados > details{border:1px solid var(--linea,#D5D8DC);border-radius:12px;padding:0 16px;background:var(--superficie,#F4F3F0)}
+.ux2-guiados > details > summary{cursor:pointer;padding:14px 0;font-weight:700;list-style-position:outside}
+.ux2-guiados > details > summary .sub{display:block;font-weight:400;color:var(--texto-2,#566573);font-size:.95rem;margin-top:2px}
+.ux2-guiados > details[open]{padding-bottom:14px}
+.ux2-guiados .datos{margin:4px 0 8px}
+.ux2-guiados .veredicto{margin:8px 0;padding:8px 12px;border-left:4px solid var(--unison-oro,#E1B73D);background:var(--fondo,#fff);border-radius:6px}
 .ux2-visor .ctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
 .ux2-visor .ctl .pos{font-weight:700}
 .ux2-visor .ctl .ux2-btn{padding:8px 14px;min-height:44px;font-size:.9rem}
@@ -966,7 +981,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <li>Cohn, J., y Greer, M. (2023). <em>Design for learning</em>. Rosenfeld Media. PDF p. 95.</li>
 <li>Kadakia, C., y Owens, L. M. D. (2020). <em>Designing for modern learning</em>. ATD Press. PDF pp. 54 y 126.</li>
 </ol></section></div><details class="ux2-traz"><summary>Datos de esta página (versión, fuentes y trazabilidad)</summary><p class="aviso-in no-imprimir"><strong>Prototipo V6.</strong> Guía armada con el material de la sesión del 28-08-2026 (edición previa), ya auditado contra el libro, las bases y la presentación del instructor (guía de estudio V8, 02-10-2026). Videos, bases y documentos se cargan desde sus publicaciones en GitHub Pages, por lo que requieren internet. Requiere el visto bueno del instructor <span class="tag pend">Por confirmar</span></p><section aria-labelledby="trazabilidad"><h2 id="trazabilidad">Trazabilidad</h2><details><summary>Ver la tabla de trazabilidad</summary>
-<div class="tabla-scroll"><table><tbody><tr><th scope="row">Diseño UX2</th><td>Segunda versión de la experiencia de uso (UX2 V1, 10/11/2026 15:30 h, Hermosillo), derivada de 2026_11_10_V6_Modulo2_Guia_Tablas_Graficas.html sin cambiar su contenido. Cambios de presentación, según el barrido de biblioteca UX del 10/11/2026 (2026_11_10_V1_Barrido_Biblioteca_UX_Plataforma_Diplomado.xlsx): el módulo se recorre en cuatro pasos (Aprende, Practica, Comprueba, Entrega) más «Consultar»; las lecciones se ven una a la vez; la barra queda en tres controles (letra, tema y «Más»); sin menú lateral; letra de 18 px, columna de texto de unos 70 caracteres y justificado con la última línea a la izquierda; la trazabilidad queda plegada al pie; la autoevaluación se abre en la misma pestaña. Las etiquetas Verificable, Inferencia, Interpretación y Propuesta, los avisos de prototipo y las notas de procedencia siguen en la página y se ven con «Más ▾ → Modo revisión».</td></tr>
+<div class="tabla-scroll"><table><tbody><tr><th scope="row">Diseño UX2</th><td>Segunda versión de la experiencia de uso (UX2 V2, 10/11/2026 15:50 h, Hermosillo), derivada de 2026_11_10_V6_Modulo2_Guia_Tablas_Graficas.html sin cambiar su contenido. Cambios de presentación, según el barrido de biblioteca UX del 10/11/2026 (2026_11_10_V1_Barrido_Biblioteca_UX_Plataforma_Diplomado.xlsx): el módulo se recorre en cuatro pasos (Aprende, Practica, Comprueba, Entrega) más «Consultar»; las lecciones se ven una a la vez; la barra queda en tres controles (letra, tema y «Más»); sin menú lateral; letra de 18 px, columna de texto de unos 70 caracteres y justificado con la última línea a la izquierda; la trazabilidad queda plegada al pie; la autoevaluación se abre en la misma pestaña. Cambios de la V2 respecto de la UX2 V1 (10/11/2026): botón «Ver en pantalla completa» visible arriba de las láminas de cada lección, con modo de respaldo dentro de la página y botón «Salir de pantalla completa (Esc)»; las láminas se ven más altas. Las etiquetas Verificable, Inferencia, Interpretación y Propuesta, los avisos de prototipo y las notas de procedencia siguen en la página y se ven con «Más ▾ → Modo revisión».</td></tr>
 <tr><th scope="row">Archivo</th><td>2026_11_10_V6_Modulo2_Guia_Tablas_Graficas</td></tr>
 <tr><th scope="row">Versión</th><td>V6 (prototipo para revisión). La entrega por Microsoft Teams se marca como Verificable (la fija el registro del diplomado); la sección Evidencia agrega la descarga de la plantilla de evidencia en Word con la portada del diplomado; el aviso inicial y los pendientes se refieren a la edición previa del material; los objetivos ya no repiten «Al terminar podrás», que está en el título del recuadro; se actualizan los enlaces a la presentación y a la autoevaluación. Versión anterior: la autoevaluación indica exportar el resultado en PDF y subirlo a Teams. Guía construida con la plantilla común de guía de módulo: mismas secciones, en el mismo orden y con el mismo menú en todos los módulos.</td></tr>
 <tr><th scope="row">Fecha y hora de emisión</th><td>10/11/2026 08:45 h (Hermosillo, Sonora, UTC−7)</td></tr>
@@ -979,7 +994,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 <tr><th scope="row">Antecedentes</th><td>2026_11_09_V5_Modulo2_Guia_Tablas_Graficas.html (versión anterior); Guía de estudio V8 (02-10-2026), sesión 3; plantilla común de guía de módulo (la misma de los módulos 4, 5 y 6); presentación del módulo (2026_11_10_V6_Modulo2_Tablas_Graficas.html); autoevaluación del módulo (2026_11_10_V4_Modulo2_Autoevaluacion_Tablas_Graficas.html); plataforma (2026_11_10_V13_Plataforma_Diplomado_Herramientas_Estadisticas.html)</td></tr>
 <tr><th scope="row">Uso previsto</th><td>Guía del módulo 2 para revisión del instructor y la coordinación.</td></tr>
 </tbody></table></div></details></section></details></main>
-<footer>2026_11_10_V1_UX2_Modulo2_Guia · UX2 V1 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
+<footer>2026_11_10_V2_UX2_Modulo2_Guia · UX2 V2 · esalas@eduardosalas.com · Universidad de Sonora, Departamento de Administración</footer>
 </div>
 </div>
 <script>
@@ -1153,6 +1168,37 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 
   /* Cada lección muestra su tramo de la presentación (o su contenido) dentro de la misma página */
   function rango(li){ var m=/l[aá]minas?\s+(\d+)\s+a\s+(\d+)/i.exec(li.querySelector('.lec-n').textContent||''); return m?[+m[1],+m[2]]:null; }
+  /* Visor de láminas reutilizable: tramo r=[a,b] de la presentación base, con pantalla completa */
+  window.ux2Visor=function(base,r,titulo,href,nombre){
+    nombre=nombre||'este tramo';
+    var v=document.createElement('div'); v.className='ux2-visor';
+    v.innerHTML='<div class="arriba no-imprimir"><button type="button" class="ux2-btn v-full" aria-label="Ver las láminas en pantalla completa">⛶ Ver en pantalla completa</button></div>'+
+      '<div class="marco"><iframe title="Presentación: '+titulo+'" loading="lazy" allow="fullscreen"></iframe><button type="button" class="salir">✕ Salir de pantalla completa (Esc)</button></div>'+
+      '<div class="ctl"><span class="pos">Lámina '+r[0]+(r[1]>r[0]?' · '+nombre+' va de la '+r[0]+' a la '+r[1]:'')+'</span>'+
+      '<span class="der"><a class="ux2-btn sec" target="diplomado-presentacion" href="'+(href||base+'#l'+r[0])+'">Abrir en otra pestaña</a></span></div>'+
+      '<p class="aviso-fin" hidden>Llegaste a la última lámina de '+nombre+'.</p>';
+    var ifr=v.querySelector('iframe'), pos=v.querySelector('.pos'), fin=v.querySelector('.aviso-fin'), m=v.querySelector('.marco'), bf=v.querySelector('.v-full');
+    ifr.src=base+'#l'+r[0];
+    function D(){ try{ return ifr.contentWindow.__deck||null; }catch(e){ return null; } }
+    function pinta(){ var d=D(); if(!d) return; var k=d.actual()+1; pos.textContent='Lámina '+k+(r[1]>r[0]?' · '+nombre+' va de la '+r[0]+' a la '+r[1]:''); fin.hidden=!(r[1]>r[0]&&k>=r[1]); }
+    function nativa(){ return document.fullscreenElement||document.webkitFullscreenElement; }
+    function enfoca(){ setTimeout(function(){ try{ ifr.focus(); ifr.contentWindow.focus(); }catch(e){} },80); }
+    function respaldo(){ m.classList.add('completa'); document.documentElement.classList.add('ux2-sin-scroll'); enfoca(); }
+    function salir(){ if(nativa()){ (document.exitFullscreen||document.webkitExitFullscreen).call(document); } m.classList.remove('completa'); document.documentElement.classList.remove('ux2-sin-scroll'); bf.focus(); }
+    bf.addEventListener('click',function(){
+      var f=m.requestFullscreen||m.webkitRequestFullscreen, hecho=false;
+      if(f){ try{ var pr=f.call(m); if(pr&&pr.then){ pr.then(function(){ hecho=true; enfoca(); },function(){ respaldo(); }); } } catch(e){ respaldo(); return; } }
+      else { respaldo(); return; }
+      setTimeout(function(){ if(!nativa() && !m.classList.contains('completa')) respaldo(); },450);
+    });
+    v.querySelector('.salir').addEventListener('click',salir);
+    window.addEventListener('keydown',function(ev){ if((ev.key==='Escape'||ev.key==='Esc') && m.classList.contains('completa')) salir(); },true);
+    ifr.addEventListener('load',function(){ var ok=false; try{ var w=ifr.contentWindow; ok=!!w.__deck; try{ var st=w.document.createElement('style'); st.textContent='#marco-cab a.mc-b{display:none !important} #marco-cab a.mc-marca{pointer-events:none}'; w.document.head.appendChild(st); }catch(e2){}
+        w.addEventListener('hashchange',pinta); w.document.addEventListener('keyup',pinta); w.document.addEventListener('click',function(){ setTimeout(pinta,60); });
+        w.addEventListener('keyup',function(ev){ if((ev.key==='Escape'||ev.key==='Esc') && m.classList.contains('completa')) salir(); },true); }catch(e){}
+      if(!ok){ pos.textContent=(r[1]>r[0]?nombre.charAt(0).toUpperCase()+nombre.slice(1)+' va de la lámina '+r[0]+' a la '+r[1]:'Lámina '+r[0])+'; avanza con los botones de la presentación.'; } else pinta(); });
+    return v;
+  };
   function montar(li){
     if(li.dataset.montada) return; li.dataset.montada='1';
     var a=li.querySelector('.lec-acc a'); if(!a) return;
@@ -1167,19 +1213,9 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
     }
     if(!r) return;
     var base=href.split('#')[0];
-    var v=document.createElement('div'); v.className='ux2-visor';
-    v.innerHTML='<div class="marco"><iframe title="Presentación: '+(li.querySelector('.lec-t').textContent||'')+'" loading="lazy" allow="fullscreen"></iframe></div>'+
-      '<div class="ctl"><span class="pos">Lámina '+r[0]+' · esta lección va de la '+r[0]+' a la '+r[1]+'</span>'+
-      '<span class="der"><button type="button" class="ux2-btn sec v-full">⛶ Pantalla completa</button><a class="ux2-btn sec" target="diplomado-presentacion" href="'+href+'">Abrir en otra pestaña</a></span></div>'+
-      '<p class="aviso-fin" hidden>Llegaste a la última lámina de esta lección. Si quedó clara, marca «Ya lo entendí» y pasa a la siguiente.</p>';
+    var v=window.ux2Visor(base,r,(li.querySelector('.lec-t').textContent||''),href,'esta lección');
+    v.querySelector('.aviso-fin').textContent='Llegaste a la última lámina de esta lección. Si quedó clara, marca «Ya lo entendí» y pasa a la siguiente.';
     a.closest('.lec-acc').before(v); a.closest('.lec-acc').hidden=true;
-    var ifr=v.querySelector('iframe'), pos=v.querySelector('.pos'), fin=v.querySelector('.aviso-fin');
-    ifr.src=base+'#l'+r[0];
-    function D(){ try{ return ifr.contentWindow.__deck||null; }catch(e){ return null; } }
-    function pinta(){ var d=D(); if(!d) return; var k=d.actual()+1; pos.textContent='Lámina '+k+' · esta lección va de la '+r[0]+' a la '+r[1]; fin.hidden=!(k>=r[1]); }
-    v.querySelector('.v-full').addEventListener('click',function(){ var m=v.querySelector('.marco'); try{ (m.requestFullscreen||m.webkitRequestFullscreen).call(m); }catch(e){} });
-    ifr.addEventListener('load',function(){ var ok=false; try{ var w=ifr.contentWindow; ok=!!w.__deck; try{ var st=w.document.createElement('style'); st.textContent='#marco-cab a.mc-b{display:none !important} #marco-cab a.mc-marca{pointer-events:none}'; w.document.head.appendChild(st); }catch(e2){} w.addEventListener('hashchange',pinta); w.document.addEventListener('keyup',pinta); w.document.addEventListener('click',function(){ setTimeout(pinta,60); }); }catch(e){}
-      if(!ok){ pos.textContent='Esta lección va de la lámina '+r[0]+' a la '+r[1]+'; avanza con los botones de la presentación.'; } else pinta(); });
   }
   var i=0;
   lis.forEach(function(li,j){ var b=document.createElement('button'); b.type='button'; b.textContent=j+1; b.setAttribute('aria-label','Lección '+(j+1)); b.addEventListener('click',function(){ ver(j); }); puntos.appendChild(b); });
