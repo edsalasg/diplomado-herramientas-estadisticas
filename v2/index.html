@@ -230,13 +230,15 @@ html[data-theme="dark"] .bienv button.pri{color:#14191E}
     else if(n>0){ c.textContent='En curso'; c.classList.add('curso'); li.querySelector('.btn').textContent='Continuar el módulo '+m.k; }
     if(!sig && n<m.lecs.length) sig={m:m, i:prim, n:n};
   });
+  var ult=parseInt(L('ux2-ultimo-modulo')||'0',10);
+  MODS.forEach(function(m){ if(m.k===ult){ var P='dato-'+dir+m.guia+'-', n=0, prim=-1; m.lecs.forEach(function(t,i){ if(L(P+'paso'+(i+1))==='1') n++; else if(prim<0) prim=i; }); if(n<m.lecs.length) sig={m:m,i:prim,n:n}; } });
   document.querySelector('.global i').style.width=(tot?100*hechas/tot:0)+'%';
   document.querySelector('.global span').textContent=hechas+' de '+tot+' lecciones';
   var box=document.querySelector('.sigue');
   if(!sig){ box.querySelector('.et').textContent='¡Terminaste las lecciones!'; box.querySelector('h2').textContent='Revisa tus evidencias y la evaluación final';
     box.querySelector('p.det').textContent='Consulta en «Información del diplomado» cómo se acredita y se obtiene la constancia.'; var a0=box.querySelector('a.btn'); a0.href='informacion.html#evaluacion'; a0.textContent='Ver la evaluación'; }
   else {
-    var empezado=hechas>0;
+    var empezado=hechas>0||ult>0;
     box.querySelector('.et').textContent=empezado?'Continúa donde te quedaste':'Empieza aquí';
     box.querySelector('h2').textContent='Módulo '+sig.m.k+' · '+sig.m.corto;
     box.querySelector('p.det').textContent='Lección '+(sig.i+1)+' de '+sig.m.lecs.length+': '+sig.m.lecs[sig.i];

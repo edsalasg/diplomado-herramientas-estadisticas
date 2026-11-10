@@ -1143,6 +1143,7 @@ footer{color:var(--texto-2,#566573);font-size:.85rem}
 
 (function(){
   var K=document.body.getAttribute('data-ux2-modulo');
+  try{ localStorage.setItem('ux2-ultimo-modulo',K); }catch(e){}
   var pasos=[].slice.call(document.querySelectorAll('.ux2-pasos button'));
   var paneles=[].slice.call(document.querySelectorAll('.ux2-panel'));
   function abrir(id,enfocar){
