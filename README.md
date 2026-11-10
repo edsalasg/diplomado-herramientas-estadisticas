@@ -20,7 +20,7 @@ Los videos e interactivos del módulo 6 se sirven desde el sitio de la clase: <h
 | Dato | Valor |
 |---|---|
 | Autor | Mtro. Eduardo Salas García · esalas@eduardosalas.com |
-| Versión publicada | Plataforma V10; módulo 2 (guía V3, presentación V3), módulo 3 (guía V1, presentación V1, borrador), módulo 4 (guía V3, presentación V3), módulo 5 (guía V4, presentación V4), módulo 6 (guía V4, presentación V5), módulo 7 (guía V1, presentación V1, borrador) y autoevaluaciones V1 de los módulos 2 a 7, del 09/11/2026 16:40 h (Hermosillo, Sonora) |
+| Versión publicada | Plataforma V11; presentaciones con portada y paleta de colores homologadas: módulo 2 (guía V4, presentación V4), módulo 3 (guía V2, presentación V2, borrador), módulo 4 (guía V4, presentación V4), módulo 5 (guía V5, presentación V5), módulo 6 (guía V5, presentación V6), módulo 7 (guía V2, presentación V2, borrador) y autoevaluaciones V2 de los módulos 2 a 7, del 09/11/2026 17:00 h (Hermosillo, Sonora) |
 | Versión anterior | Plataforma V5 y Módulo 6 V1 (página continua), publicadas el 09/11/2026 a las 14:54 h |
 | Archivos de origen | `2026_11_09_V6_Plataforma_Diplomado_Herramientas_Estadisticas.html`, `2026_11_09_V2_Modulo6_Medias_Dos_Poblaciones.html` y `2026_11_09_V1_Modulo6_Guia_Medias_Dos_Poblaciones.html` |
 | Cambios para publicar | Enlaces entre páginas ajustados a `index.html`, `modulo-6-guia.html` y `modulo-6.html`; enlaces a los .zip del módulo 6 apuntan al sitio de la clase; se agregó la indicación de no indexar en buscadores |
